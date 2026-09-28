@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Broccoli Park — все ссылки</title>
+  <meta name="description" content="Меню, локация, Instagram, бронь и доставка Broccoli Park — семейного ресторана в центре Ташкента.">
+  <meta name="theme-color" content="#1F3D2B">
+  <link rel="canonical" href="https://broccolipark.uz/broccoli_links/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Broccoli Park — все ссылки">
+  <meta property="og:description" content="Меню, локация, Instagram, бронь и доставка.">
+  <meta property="og:image" content="https://broccolipark.uz/broccoli_links/bg.jpg">
+  <link rel="icon" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;1,400&family=Unbounded:wght@600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" type="image/webp" imagesrcset="bg-720.webp 720w, bg.webp 1200w" imagesizes="100vw">
+
+  <style>
+    :root {
+      --green-900: #1F3D2B;
+      --green-600: #3E7C4F;
+      --lime: #8DC63F;
+      --accent: #F2A541;
+      --overlay: .75;            /* затемнение поверх фото: 0 — нет, 1 — сплошной цвет */
+      --glass: rgba(255, 255, 255, .12);
+      --glass-border: rgba(255, 255, 255, .22);
+      --ease: cubic-bezier(.22, .8, .24, 1);
+      --spring: cubic-bezier(.34, 1.56, .64, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; overflow-x: clip; background: var(--green-900); }
+    body {
+      margin: 0; min-height: 100vh; min-height: 100svh;
+      font-family: "Jost", "Futura", system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: #fff; -webkit-font-smoothing: antialiased;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: calc(12px + env(safe-area-inset-top)) 14px calc(14px + env(safe-area-inset-bottom));
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; color: inherit; cursor: pointer; }
+    img { display: block; max-width: 100%; }
+    .ico { width: 21px; height: 21px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 12px; }
+
+    /* ---------- Фон: фото + затемнение 75% ---------- */
+    .bg { position: fixed; inset: 0; z-index: -2; overflow: hidden; }
+    .bg picture, .bg img { width: 100%; height: 100%; }
+    .bg picture { display: block; }
+    .bg img { object-fit: cover; object-position: 55% 45%; animation: kenburns 24s ease-in-out infinite alternate; }
+    .bg::after { content: ""; position: absolute; inset: 0; background: var(--green-900); opacity: var(--overlay); }
+    .glow { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
+    .glow span { position: absolute; width: 60vmax; height: 60vmax; border-radius: 50%; filter: blur(80px); opacity: .22; animation: drift 20s ease-in-out infinite alternate; }
+    .glow span:nth-child(1) { background: var(--lime); left: -25vmax; top: -20vmax; }
+    .glow span:nth-child(2) { background: var(--accent); right: -30vmax; bottom: -30vmax; opacity: .14; animation-delay: -8s; }
+    @keyframes kenburns { from { transform: scale(1.12) translate(-1%, -1%); } to { transform: scale(1.02) translate(1%, 1%); } }
+    @keyframes drift { to { transform: translate(8vmax, 6vmax) scale(1.1); } }
+
+    .page { width: 100%; max-width: 440px; }
+
+    /* ---------- Верхняя панель ---------- */
+    .topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; opacity: 0; animation: fadeDown .6s var(--ease) .5s forwards; }
+    .chip-btn, .lang { background: var(--glass); border: 1px solid var(--glass-border); backdrop-filter: blur(14px) saturate(150%); -webkit-backdrop-filter: blur(14px) saturate(150%); }
+    .chip-btn { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; transition: transform .3s var(--spring), background-color .2s; }
+    .chip-btn:hover { transform: scale(1.08); background: rgba(255,255,255,.22); }
+    .chip-btn .ico { width: 18px; height: 18px; }
+    .lang { display: flex; padding: 3px; border-radius: 999px; }
+    .lang button { min-width: 40px; min-height: 34px; border: 0; border-radius: 999px; background: transparent; font-weight: 600; font-size: .78rem; letter-spacing: .06em; transition: background-color .25s, color .25s; }
+    .lang button[aria-pressed="true"] { background: #fff; color: var(--green-900); }
+
+    /* ---------- Профиль ---------- */
+    .profile { text-align: center; }
+    .avatar { position: relative; width: 92px; aspect-ratio: 1; margin: 0 auto; opacity: 0; animation: pop .9s var(--spring) .2s forwards; }
+    .avatar::before { content: ""; position: absolute; inset: -5px; border-radius: 50%; background: conic-gradient(from 0deg, var(--lime), rgba(255,255,255,.9) 25%, var(--accent) 50%, rgba(255,255,255,.9) 75%, var(--lime)); animation: spin 6s linear infinite; }
+    .avatar::after { content: ""; position: absolute; inset: -22px; border-radius: 50%; background: radial-gradient(circle, rgba(141,198,63,.45), transparent 65%); z-index: -1; animation: breathe 3.5s ease-in-out infinite; }
+    .avatar picture { display: block; position: relative; width: 100%; height: 100%; }
+    .avatar img { width: 100%; height: 100%; border-radius: 50%; background: #fff; border: 3px solid #fff; animation: bob 5s ease-in-out 1.2s infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes breathe { 50% { transform: scale(1.12); opacity: .6; } }
+    @keyframes bob { 50% { transform: translateY(-4px) rotate(-3deg); } }
+    @keyframes pop { from { opacity: 0; transform: scale(.4) rotate(-25deg); } to { opacity: 1; transform: none; } }
+
+    .name { margin: 12px 0 0; font-family: "Unbounded", "Jost", sans-serif; font-weight: 600; font-size: 1.6rem; letter-spacing: -.02em; line-height: 1.15; }
+    .name span { display: inline-block; opacity: 0; transform: translateY(14px); animation: up .6s var(--ease) forwards; }
+    .tagline { margin: 6px auto 0; max-width: 42ch; text-wrap: balance; font-size: 1rem; line-height: 1.35; color: rgba(255,255,255,.88); }
+    .chef { margin: 3px 0 0; font-style: italic; font-size: .94rem; color: rgba(255,255,255,.7); }
+    .status { display: inline-flex; align-items: center; gap: 7px; margin-top: 10px; padding: 5px 12px; border-radius: 999px; background: var(--glass); border: 1px solid var(--glass-border); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); font-weight: 500; font-size: .86rem; }
+    .status__dot { width: 8px; height: 8px; border-radius: 50%; background: #3DDC84; box-shadow: 0 0 0 0 rgba(61,220,132,.7); animation: pulse 2s infinite; }
+    .status.is-closed .status__dot { background: #FF7A5C; animation: none; }
+    @keyframes pulse { 70% { box-shadow: 0 0 0 8px rgba(61,220,132,0); } 100% { box-shadow: 0 0 0 0 rgba(61,220,132,0); } }
+
+    .fade { opacity: 0; transform: translateY(14px); animation: up .7s var(--ease) forwards; animation-delay: var(--delay, 0s); }
+    @keyframes up { to { opacity: 1; transform: none; } }
+    @keyframes fadeDown { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+
+    /* ---------- Ссылки ---------- */
+    .links { display: grid; grid-template-columns: minmax(0, 1fr); gap: 9px; margin: 16px 0 0; padding: 0; list-style: none; }
+    .link {
+      position: relative; isolation: isolate; overflow: hidden;
+      display: flex; align-items: center; gap: 12px; min-height: 58px; padding: 8px 16px 8px 8px;
+      border-radius: 18px; background: #fff; color: var(--green-900);
+      box-shadow: 0 10px 24px -14px rgba(0,0,0,.55);
+      transition: transform .35s var(--spring), box-shadow .35s var(--ease);
+      -webkit-tap-highlight-color: transparent;
+    }
+    .link::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(115deg, transparent 30%, rgba(141,198,63,.25) 50%, transparent 70%); transform: translateX(-120%); transition: transform .8s var(--ease); }
+    .link:hover { transform: translateY(-2px) scale(1.012); box-shadow: 0 16px 30px -14px rgba(0,0,0,.6); }
+    .link:hover::before { transform: translateX(120%); }
+    .link:active { transform: scale(.975); transition-duration: .1s; }
+    .link__icon { display: grid; place-items: center; width: 42px; height: 42px; flex: none; border-radius: 13px; background: #E8F3DA; color: var(--green-600); transition: transform .45s var(--spring), background-color .3s, color .3s; }
+    .link:hover .link__icon { transform: rotate(-10deg) scale(1.08); background: var(--green-600); color: #fff; }
+    .link__text { flex: 1; min-width: 0; }
+    .link__title { display: block; font-size: 1.08rem; font-weight: 600; line-height: 1.2; }
+    .link__sub { display: block; font-size: .82rem; color: #6B6B6B; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .link__arrow { width: 18px; height: 18px; opacity: .35; transition: transform .35s var(--ease), opacity .3s; }
+    .link:hover .link__arrow { opacity: .9; transform: translate(2px, -2px); }
+
+    .link--accent { background: linear-gradient(120deg, var(--lime), #6FB23A); color: var(--green-900); }
+    .link--accent .link__icon { background: rgba(255,255,255,.4); color: var(--green-900); }
+    .link--accent .link__sub { color: rgba(31,61,43,.75); }
+    .link--accent::before { background: linear-gradient(115deg, transparent 30%, rgba(255,255,255,.45) 50%, transparent 70%); }
+
+    /* Быстрые действия — 4 иконки в ряд */
+    .quick { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin: 9px 0 0; padding: 0; list-style: none; }
+    .quick a {
+      position: relative; isolation: isolate; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+      min-height: 70px; padding: 8px 4px; border-radius: 16px; text-align: center;
+      background: var(--glass); border: 1px solid var(--glass-border);
+      backdrop-filter: blur(14px) saturate(150%); -webkit-backdrop-filter: blur(14px) saturate(150%);
+      font-size: .78rem; font-weight: 500; line-height: 1.15;
+      transition: transform .35s var(--spring), background-color .25s;
+    }
+    .quick a:hover { transform: translateY(-3px); background: rgba(255,255,255,.22); }
+    .quick a:active { transform: scale(.95); }
+    .quick .ico { width: 22px; height: 22px; transition: transform .45s var(--spring); }
+    .quick a:hover .ico { transform: scale(1.15) rotate(-8deg); }
+
+    .ripple { position: absolute; border-radius: 50%; transform: scale(0); background: rgba(62,124,79,.22); animation: ripple .6s linear; pointer-events: none; z-index: -1; }
+    .quick .ripple { background: rgba(255,255,255,.35); }
+    @keyframes ripple { to { transform: scale(4); opacity: 0; } }
+
+    footer { margin-top: 12px; text-align: center; font-size: .8rem; color: rgba(255,255,255,.6); }
+    footer b { color: var(--accent); font-weight: 600; }
+
+    .toast { position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom)); transform: translate(-50%, 30px); opacity: 0; padding: 10px 18px; border-radius: 999px; background: #fff; color: var(--green-900); font-weight: 600; box-shadow: 0 12px 30px -10px rgba(0,0,0,.5); transition: opacity .3s, transform .4s var(--spring); pointer-events: none; z-index: 10; }
+    .toast.is-shown { opacity: 1; transform: translate(-50%, 0); }
+
+
+    /* =========================================================
+       Модальное окно бронирования
+       Компьютер: карточка по центру. Телефон (<600px): на весь экран + кнопка «Назад».
+       ========================================================= */
+    .modal { position: fixed; inset: 0; z-index: 50; display: flex; align-items: center; justify-content: center; padding: 20px; }
+    .modal[hidden] { display: none; }
+    .modal__backdrop { position: absolute; inset: 0; background: rgba(10, 24, 16, .55); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); opacity: 0; transition: opacity .35s var(--ease); }
+    .modal.is-open .modal__backdrop { opacity: 1; }
+    .sheet {
+      position: relative; width: 100%; max-width: 460px; max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px);
+      display: flex; flex-direction: column; overflow: hidden;
+      background: #fff; color: var(--text, #1E1E1E); border-radius: 26px;
+      box-shadow: 0 30px 80px -20px rgba(0,0,0,.6);
+      opacity: 0; transform: translateY(24px) scale(.96);
+      transition: opacity .35s var(--ease), transform .45s var(--spring);
+    }
+    .modal.is-open .sheet { opacity: 1; transform: none; }
+    .sheet__head { display: flex; align-items: center; gap: 10px; padding: 14px 14px 10px 18px; }
+    .sheet__title { flex: 1; margin: 0; font-family: "Unbounded", "Jost", sans-serif; font-weight: 600; font-size: 1.15rem; color: var(--green-900); }
+    .sheet .sheet__back { display: none; }
+    .icon-btn { display: grid; place-items: center; width: 44px; height: 44px; flex: none; border: 0; border-radius: 50%; background: #F1F4EE; color: var(--green-900); transition: transform .3s var(--spring), background-color .2s; }
+    .icon-btn:hover { background: #E4EEDC; transform: scale(1.06); }
+    .icon-btn:active { transform: scale(.92); }
+    .sheet__body { flex: 1; overflow-y: auto; overscroll-behavior: contain; padding: 4px 18px 18px; -webkit-overflow-scrolling: touch; }
+    .sheet__lead { margin: 0 0 14px; color: #6B6B6B; font-size: .95rem; }
+    .sheet__foot { padding: 12px 18px calc(16px + env(safe-area-inset-bottom)); border-top: 1px solid #EEF1EA; background: #fff; }
+
+    .bf { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 12px; }
+    .bf .full { grid-column: 1 / -1; }
+    .fld { display: grid; gap: 5px; min-width: 0; }
+    .fld > label, .fld > .lbl { font-weight: 600; font-size: .88rem; color: var(--green-900); }
+    .fld input, .fld textarea {
+      width: 100%; min-width: 0; min-height: 50px; padding: 11px 14px; border-radius: 14px;
+      border: 1.5px solid #DDE3D8; background: #F7F8F5; font: inherit; font-size: 1rem; color: #1E1E1E;
+      transition: border-color .2s, box-shadow .2s, background-color .2s; -webkit-appearance: none; appearance: none;
+    }
+    .fld textarea { min-height: 72px; resize: vertical; }
+    .fld input:focus, .fld textarea:focus { outline: none; border-color: var(--green-600); background: #fff; box-shadow: 0 0 0 4px rgba(62,124,79,.14); }
+    .fld.bad input { border-color: #D0453A; background: #FFF5F3; }
+    .err { margin: 0; color: #B03021; font-size: .8rem; font-weight: 500; }
+    .err:empty { display: none; }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .chip { position: relative; }
+    .chip input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
+    .chip span { display: inline-flex; align-items: center; min-height: 40px; padding: 8px 14px; border-radius: 999px; border: 1.5px solid #DDE3D8; background: #F7F8F5; font-weight: 500; font-size: .9rem; transition: background-color .2s, color .2s, border-color .2s, transform .25s var(--spring); }
+    .chip input:checked + span { background: var(--green-600); border-color: var(--green-600); color: #fff; transform: scale(1.03); }
+    .chip input:focus-visible + span { outline: 3px solid var(--accent); outline-offset: 2px; }
+    .stepper { display: flex; align-items: stretch; min-height: 50px; border-radius: 14px; border: 1.5px solid #DDE3D8; background: #F7F8F5; overflow: hidden; }
+    .stepper button { width: 46px; border: 0; background: transparent; font-size: 1.35rem; color: var(--green-600); }
+    .stepper button:active { background: #E4EEDC; }
+    .stepper input { border: 0 !important; background: transparent !important; box-shadow: none !important; text-align: center; font-weight: 600; min-height: 0; padding: 0; -moz-appearance: textfield; }
+    .stepper input::-webkit-inner-spin-button, .stepper input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+    .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+    .submit {
+      position: relative; overflow: hidden; width: 100%; min-height: 54px; border: 0; border-radius: 16px;
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      background: linear-gradient(120deg, var(--green-600), #5E9E4A); color: #fff; font-weight: 600; font-size: 1.05rem;
+      box-shadow: 0 12px 24px -12px rgba(62,124,79,.8); transition: transform .3s var(--spring), filter .2s;
+    }
+    .submit:hover { filter: brightness(1.06); transform: translateY(-1px); }
+    .submit:active { transform: scale(.98); }
+    .submit[disabled] { opacity: .75; pointer-events: none; }
+    .submit .spin { display: none; width: 18px; height: 18px; border-radius: 50%; border: 2.5px solid rgba(255,255,255,.4); border-top-color: #fff; animation: spin .8s linear infinite; }
+    .submit.is-loading .spin { display: block; }
+    .form-err { margin: 0 0 10px; color: #B03021; font-weight: 500; font-size: .9rem; text-align: center; }
+    .form-err:empty { display: none; }
+
+    /* Экран «Готово» */
+    .done { display: none; text-align: center; padding: 18px 4px 6px; }
+    .sheet.is-done .done { display: block; }
+    .sheet.is-done .bf, .sheet.is-done .sheet__lead, .sheet.is-done .sheet__foot { display: none; }
+    .done__icon { display: grid; place-items: center; width: 78px; height: 78px; margin: 0 auto 14px; border-radius: 50%; background: #E8F3DA; color: var(--green-600); animation: pop .7s var(--spring) both; }
+    .done__icon .ico { width: 38px; height: 38px; stroke-width: 2.6; stroke-dasharray: 30; stroke-dashoffset: 30; animation: draw .6s var(--ease) .35s forwards; }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    .done h3 { margin: 0 0 6px; font-family: "Unbounded", "Jost", sans-serif; font-weight: 600; font-size: 1.2rem; color: var(--green-900); }
+    .done p { margin: 0 0 14px; color: #6B6B6B; }
+    .done pre { margin: 0 0 14px; padding: 12px 14px; border-radius: 14px; background: #F7F8F5; text-align: left; white-space: pre-wrap; font: inherit; font-size: .88rem; color: #333; }
+    .done__actions { display: grid; gap: 8px; }
+    .done__actions a, .done__actions button { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 50px; border-radius: 14px; font-weight: 600; border: 1.5px solid #DDE3D8; background: #fff; color: var(--green-900); }
+    .done__actions .primary { background: var(--green-600); border-color: var(--green-600); color: #fff; }
+
+    .done [hidden] { display: none !important; }
+    .sheet.is-done .sheet__body { display: flex; flex-direction: column; justify-content: center; }
+    .sheet.is-done .done { width: 100%; }
+    body.modal-open { overflow: hidden; }
+
+    /* Телефон: на весь экран, выезжает снизу, кнопка «Назад» */
+    @media (max-width: 599.98px) {
+      .modal { padding: 0; align-items: stretch; }
+      .sheet { max-width: none; max-height: none; height: 100%; border-radius: 0; transform: translateY(100%); opacity: 1; transition: transform .45s var(--ease); }
+      .modal.is-open .sheet { transform: none; }
+      .sheet__head { padding: calc(10px + env(safe-area-inset-top)) 12px 10px; border-bottom: 1px solid #EEF1EA; }
+      .sheet .sheet__back { display: grid; }
+      .sheet .sheet__close { display: none; }
+      .sheet__title { font-size: 1.05rem; }
+      .sheet__body { padding-top: 14px; }
+    }
+    @media (max-width: 359.98px) { .bf { grid-template-columns: minmax(0,1fr); } }
+
+    /* Низкие экраны (iPhone SE и т. п.) — ещё компактнее */
+    @media (max-height: 700px) {
+      .avatar { width: 76px; }
+      .name { font-size: 1.4rem; margin-top: 9px; }
+      .chef { display: none; }
+      .links { margin-top: 12px; gap: 7px; }
+      .link { min-height: 52px; }
+      .link__icon { width: 38px; height: 38px; }
+      .quick a { min-height: 62px; }
+    }
+    @media (min-width: 768px) {
+      .avatar { width: 108px; }
+      .name { font-size: 1.9rem; }
+      .page { max-width: 460px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; animation-delay: 0s !important; transition-duration: .001ms !important; }
+      .fade, .name span, .avatar, .topbar { opacity: 1 !important; transform: none !important; }
+      .sheet { transform: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2M15 18H9M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98M15.41 6.51l-6.82 3.98"/></symbol>
+  </svg>
+
+  <!-- Фон: фото зала + зелёное затемнение 75% (переменная --overlay) -->
+  <div class="bg" aria-hidden="true">
+    <picture>
+      <source type="image/webp" srcset="bg-720.webp 720w, bg.webp 1200w" sizes="100vw">
+      <img src="bg.jpg" srcset="bg-720.jpg 720w, bg.jpg 1200w" sizes="100vw" alt="" width="1200" height="960" fetchpriority="high">
+    </picture>
+  </div>
+  <div class="glow" aria-hidden="true"><span></span><span></span></div>
+
+  <div class="page">
+    <div class="topbar">
+      <button class="chip-btn" id="share" type="button" aria-label="Поделиться" data-i18n-aria="share"><svg class="ico"><use href="#i-share"/></svg></button>
+      <div class="lang" role="group" aria-label="Язык">
+        <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang="uz" aria-pressed="false">UZ</button>
+      </div>
+    </div>
+
+    <header class="profile">
+      <div class="avatar">
+        <picture><source srcset="logo.webp" type="image/webp"><img src="logo.png" alt="Логотип Broccoli" width="400" height="400"></picture>
+      </div>
+      <h1 class="name" aria-label="Broccoli Park"><span style="animation-delay:.45s">Broccoli</span> <span style="animation-delay:.56s">Park</span></h1>
+      <p class="tagline fade" style="--delay:.65s" data-i18n="tagline">Семейный ресторан в самом центре Ташкента.</p>
+      <p class="chef fade" style="--delay:.72s" data-i18n="chef">Авторское меню от шеф-повара Рахимовой Дилшоды</p>
+      <p class="status fade" style="--delay:.8s" id="status" aria-live="polite"><span class="status__dot" aria-hidden="true"></span><span id="status-text">Ежедневно 08:00–23:00</span></p>
+    </header>
+
+    <main>
+      <ul class="links">
+        <li class="fade" style="--delay:.88s"><a class="link" href="../#menu">
+          <span class="link__icon"><svg class="ico"><use href="#i-menu"/></svg></span>
+          <span class="link__text"><span class="link__title" data-i18n="menu">Меню</span><span class="link__sub" data-i18n="menuSub">280+ блюд · завтраки с 08:00</span></span>
+          <svg class="ico link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        <li class="fade" style="--delay:.95s"><a class="link" href="https://yandex.uz/maps/org/broccoli_park/178977758143/" target="_blank" rel="noopener">
+          <span class="link__icon"><svg class="ico"><use href="#i-pin"/></svg></span>
+          <span class="link__text"><span class="link__title" data-i18n="location">Локация</span><span class="link__sub" data-i18n="locationSub">ул. Шахрисабз, 31Б · м. Amir Temur xiyoboni</span></span>
+          <svg class="ico link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        <li class="fade" style="--delay:1.02s"><a class="link" href="https://www.instagram.com/broccolipark.uz" target="_blank" rel="noopener">
+          <span class="link__icon"><svg class="ico"><use href="#i-insta"/></svg></span>
+          <span class="link__text"><span class="link__title">Instagram</span><span class="link__sub">@broccolipark.uz</span></span>
+          <svg class="ico link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        <li class="fade" style="--delay:1.09s"><a class="link link--accent" href="../#booking" data-open-booking aria-haspopup="dialog">
+          <span class="link__icon"><svg class="ico"><use href="#i-cal"/></svg></span>
+          <span class="link__text"><span class="link__title" data-i18n="book">Забронировать стол</span><span class="link__sub" data-i18n="bookSub">Подтвердим за 15 минут</span></span>
+          <svg class="ico link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+      </ul>
+
+      <ul class="quick">
+        <li class="fade" style="--delay:1.16s"><a href="tel:+998955011010"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="call">Позвонить</span></a></li>
+        <li class="fade" style="--delay:1.21s"><a href="https://t.me/broccoli_uz" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-send"/></svg><span>Telegram</span></a></li>
+        <li class="fade" style="--delay:1.26s"><a href="tel:+998956021010"><svg class="ico" aria-hidden="true"><use href="#i-truck"/></svg><span data-i18n="delivery">Доставка</span></a></li>
+        <li class="fade" style="--delay:1.31s"><a href="../"><svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg><span data-i18n="site">Сайт</span></a></li>
+      </ul>
+    </main>
+
+    <footer class="fade" style="--delay:1.4s"><b>★ 5.0</b> <span data-i18n="yandex">на Яндекс Картах</span> · © 2026 Broccoli Park</footer>
+  </div>
+
+
+  <!-- ================= Модальное окно бронирования ================= -->
+  <div class="modal" id="booking" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+      <div class="sheet__head">
+        <button class="icon-btn sheet__back" type="button" data-close aria-label="Назад" data-i18n-aria="back"><svg class="ico"><use href="#i-back"/></svg></button>
+        <h2 class="sheet__title" id="sheet-title" data-i18n="bTitle">Бронь стола</h2>
+        <button class="icon-btn sheet__close" type="button" data-close aria-label="Закрыть" data-i18n-aria="close"><svg class="ico"><use href="#i-x"/></svg></button>
+      </div>
+
+      <div class="sheet__body">
+        <p class="sheet__lead" data-i18n="bLead">Оставьте заявку — администратор перезвонит и подтвердит бронь в течение 15 минут.</p>
+        <form class="bf" id="bform" novalidate>
+          <div class="fld full">
+            <label for="b-name" data-i18n="fName">Имя</label>
+            <input id="b-name" name="name" type="text" autocomplete="name" maxlength="60" required data-i18n-ph="fNamePh" placeholder="Как к вам обращаться">
+            <p class="err" id="b-name-err"></p>
+          </div>
+          <div class="fld full">
+            <label for="b-phone" data-i18n="fPhone">Телефон</label>
+            <input id="b-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="+998 __ ___ __ __">
+            <p class="err" id="b-phone-err"></p>
+          </div>
+          <div class="fld full">
+            <span class="lbl" data-i18n="fDate">Дата</span>
+            <div class="chips" id="b-quickdate">
+              <label class="chip"><input type="radio" name="qd" value="0" checked><span data-i18n="today">Сегодня</span></label>
+              <label class="chip"><input type="radio" name="qd" value="1"><span data-i18n="tomorrow">Завтра</span></label>
+              <label class="chip"><input type="radio" name="qd" value="x"><span data-i18n="otherDay">Другой день</span></label>
+            </div>
+            <input id="b-date" name="date" type="date" required hidden aria-label="Дата">
+            <p class="err" id="b-date-err"></p>
+          </div>
+          <div class="fld">
+            <label for="b-time" data-i18n="fTime">Время</label>
+            <input id="b-time" name="time" type="time" min="08:00" max="22:00" step="900" required value="19:00">
+            <p class="err" id="b-time-err"></p>
+          </div>
+          <div class="fld">
+            <label for="b-guests" data-i18n="fGuests">Гостей</label>
+            <div class="stepper">
+              <button type="button" data-step="-1" aria-label="−1">−</button>
+              <input id="b-guests" name="guests" type="number" inputmode="numeric" min="1" max="50" value="2" required>
+              <button type="button" data-step="1" aria-label="+1">+</button>
+            </div>
+            <p class="err" id="b-guests-err"></p>
+          </div>
+          <div class="fld full">
+            <span class="lbl" data-i18n="fZone">Зона</span>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="zone" value="zone1" checked><span data-i18n="zone1">1 этаж · бистро</span></label>
+              <label class="chip"><input type="radio" name="zone" value="zone2"><span data-i18n="zone2">2 этаж · ресторан</span></label>
+              <label class="chip"><input type="radio" name="zone" value="zone3"><span data-i18n="zone3">Терраса</span></label>
+            </div>
+          </div>
+          <div class="fld full">
+            <label for="b-comment" data-i18n="fComment">Комментарий</label>
+            <textarea id="b-comment" name="comment" rows="2" maxlength="500" data-i18n-ph="fCommentPh" placeholder="Повод, детский стульчик, пожелания…"></textarea>
+          </div>
+          <div class="hp" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+        </form>
+
+        <div class="done" role="status" aria-live="polite">
+          <div class="done__icon"><svg class="ico"><use href="#i-check"/></svg></div>
+          <h3 id="done-title">Заявка отправлена!</h3>
+          <p id="done-text">Администратор перезвонит вам в течение 15 минут.</p>
+          <pre id="done-msg" hidden></pre>
+          <div class="done__actions">
+            <a class="primary" id="done-tg" href="https://t.me/broccoli_uz" target="_blank" rel="noopener" hidden><svg class="ico"><use href="#i-send"/></svg><span data-i18n="openTg">Открыть Telegram</span></a>
+            <a href="tel:+998955011010"><svg class="ico"><use href="#i-phone"/></svg><span data-i18n="call">Позвонить</span></a>
+            <button type="button" data-close data-i18n="done">Готово</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="sheet__foot">
+        <p class="form-err" id="b-form-err" role="alert"></p>
+        <button class="submit" type="submit" form="bform"><span class="spin" aria-hidden="true"></span><svg class="ico"><use href="#i-cal"/></svg><span id="b-submit-label" data-i18n="submit">Забронировать</span></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+  (function () {
+    'use strict';
+    var DICT = {
+      ru: {
+        title: 'Broccoli Park — все ссылки', share: 'Поделиться',
+        tagline: 'Семейный ресторан в самом центре Ташкента.',
+        chef: 'Авторское меню от шеф-повара Рахимовой Дилшоды',
+        menu: 'Меню', menuSub: '280+ блюд · завтраки с 08:00',
+        location: 'Локация', locationSub: 'ул. Шахрисабз, 31Б · м. Amir Temur xiyoboni',
+        book: 'Забронировать стол', bookSub: 'Подтвердим за 15 минут',
+        call: 'Позвонить', delivery: 'Доставка', site: 'Сайт', yandex: 'на Яндекс Картах',
+        open: 'Открыто · до 23:00', closed: 'Закрыто · откроемся в 08:00', soon: 'Скоро закрываемся · до 23:00',
+        copied: 'Ссылка скопирована',
+        back: 'Назад', close: 'Закрыть', bTitle: 'Бронь стола',
+        bLead: 'Оставьте заявку — администратор перезвонит и подтвердит бронь в течение 15 минут.',
+        fName: 'Имя', fNamePh: 'Как к вам обращаться', fPhone: 'Телефон', fDate: 'Дата', fTime: 'Время', fGuests: 'Гостей',
+        fZone: 'Зона', zone1: '1 этаж · бистро', zone2: '2 этаж · ресторан', zone3: 'Терраса',
+        fComment: 'Комментарий', fCommentPh: 'Повод, детский стульчик, пожелания…',
+        today: 'Сегодня', tomorrow: 'Завтра', otherDay: 'Другой день',
+        submit: 'Забронировать', sending: 'Отправляем…', done: 'Готово', openTg: 'Открыть Telegram',
+        eName: 'Укажите имя', ePhone: 'Номер полностью: +998 __ ___ __ __', eDate: 'Выберите дату — сегодня или позже',
+        eTime: 'Принимаем гостей с 08:00 до 22:00', eGuests: 'От 1 до 50 гостей', eForm: 'Проверьте поля, отмеченные красным',
+        eRate: 'Слишком много заявок. Попробуйте позже или позвоните.',
+        sentTitle: 'Заявка отправлена!', sentText: 'Администратор перезвонит вам в течение 15 минут.',
+        fbTitle: 'Заявка готова', fbText: 'Мы скопировали текст — отправьте его нам в Telegram или просто позвоните.',
+        msgHead: 'Бронь стола — Broccoli Park'
+      },
+      en: {
+        title: 'Broccoli Park — all links', share: 'Share',
+        tagline: 'A family restaurant in the very heart of Tashkent.',
+        chef: 'Signature menu by chef Dilshoda Rakhimova',
+        menu: 'Menu', menuSub: '280+ dishes · breakfast from 8 am',
+        location: 'Location', locationSub: '31B Shakhrisabz St. · Amir Temur xiyoboni metro',
+        book: 'Book a table', bookSub: 'Confirmed within 15 minutes',
+        call: 'Call', delivery: 'Delivery', site: 'Website', yandex: 'on Yandex Maps',
+        open: 'Open now · until 11 pm', closed: 'Closed · opens at 8 am', soon: 'Closing soon · until 11 pm',
+        copied: 'Link copied',
+        back: 'Back', close: 'Close', bTitle: 'Book a table',
+        bLead: 'Leave a request and our host will call you back to confirm within 15 minutes.',
+        fName: 'Name', fNamePh: 'Your name', fPhone: 'Phone', fDate: 'Date', fTime: 'Time', fGuests: 'Guests',
+        fZone: 'Area', zone1: 'Ground floor · bistro', zone2: 'First floor · restaurant', zone3: 'Terrace',
+        fComment: 'Comment', fCommentPh: 'Occasion, high chair, wishes…',
+        today: 'Today', tomorrow: 'Tomorrow', otherDay: 'Another day',
+        submit: 'Book', sending: 'Sending…', done: 'Done', openTg: 'Open Telegram',
+        eName: 'Please enter your name', ePhone: 'Full number: +998 __ ___ __ __', eDate: 'Choose today or a later date',
+        eTime: 'We seat guests from 8 am to 10 pm', eGuests: 'From 1 to 50 guests', eForm: 'Please check the highlighted fields',
+        eRate: 'Too many requests. Please try later or call us.',
+        sentTitle: 'Request sent!', sentText: 'Our host will call you back within 15 minutes.',
+        fbTitle: 'Your request is ready', fbText: 'We copied the text — send it to us on Telegram or simply call.',
+        msgHead: 'Table booking — Broccoli Park'
+      },
+      uz: {
+        title: 'Broccoli Park — barcha havolalar', share: 'Ulashish',
+        tagline: 'Toshkentning qoq markazidagi oilaviy restoran.',
+        chef: 'Oshpaz Dilshoda Rahimovaning mualliflik menyusi',
+        menu: 'Menyu', menuSub: '280+ taom · nonushta 08:00 dan',
+        location: 'Manzil', locationSub: 'Shahrisabz koʻchasi, 31B · Amir Temur xiyoboni',
+        book: 'Stol band qilish', bookSub: '15 daqiqada tasdiqlaymiz',
+        call: 'Qoʻngʻiroq', delivery: 'Yetkazish', site: 'Sayt', yandex: 'Yandex Xaritalarda',
+        open: 'Ochiq · 23:00 gacha', closed: 'Yopiq · 08:00 da ochamiz', soon: 'Tez orada yopamiz · 23:00 gacha',
+        copied: 'Havola nusxalandi',
+        back: 'Orqaga', close: 'Yopish', bTitle: 'Stol band qilish',
+        bLead: 'Ariza qoldiring — administrator 15 daqiqa ichida qoʻngʻiroq qilib, bronni tasdiqlaydi.',
+        fName: 'Ism', fNamePh: 'Ismingiz', fPhone: 'Telefon', fDate: 'Sana', fTime: 'Vaqt', fGuests: 'Mehmonlar',
+        fZone: 'Joy', zone1: '1-qavat · bistro', zone2: '2-qavat · restoran', zone3: 'Ayvon',
+        fComment: 'Izoh', fCommentPh: 'Sabab, bolalar stulchasi, istaklar…',
+        today: 'Bugun', tomorrow: 'Ertaga', otherDay: 'Boshqa kun',
+        submit: 'Band qilish', sending: 'Yuborilmoqda…', done: 'Tayyor', openTg: 'Telegramni ochish',
+        eName: 'Ismingizni kiriting', ePhone: 'Raqamni toʻliq kiriting: +998 __ ___ __ __', eDate: 'Bugun yoki keyingi sanani tanlang',
+        eTime: 'Mehmonlarni 08:00 dan 22:00 gacha qabul qilamiz', eGuests: '1 dan 50 gacha mehmon', eForm: 'Qizil bilan belgilangan maydonlarni tekshiring',
+        eRate: 'Juda koʻp ariza. Keyinroq urinib koʻring yoki qoʻngʻiroq qiling.',
+        sentTitle: 'Ariza yuborildi!', sentText: 'Administrator 15 daqiqa ichida qoʻngʻiroq qiladi.',
+        fbTitle: 'Ariza tayyor', fbText: 'Matnni nusxaladik — uni Telegramda yuboring yoki qoʻngʻiroq qiling.',
+        msgHead: 'Stol bron — Broccoli Park'
+      }
+    };
+    var LANGS = ['ru', 'en', 'uz'];
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var lang = 'ru';
+    function get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+    function set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+
+    function detect() {
+      var q = new URLSearchParams(location.search).get('lang');
+      if (LANGS.indexOf(q) > -1) return q;
+      var s = get('bp-lang'); if (LANGS.indexOf(s) > -1) return s; // общий ключ с основным сайтом
+      var n = (navigator.language || '').slice(0, 2).toLowerCase();
+      return LANGS.indexOf(n) > -1 ? n : 'ru';
+    }
+
+    // «Открыто сейчас» по времени Ташкента (UTC+5)
+    function updateStatus() {
+      var d = DICT[lang], now = new Date();
+      var t = new Date(now.getTime() + now.getTimezoneOffset() * 60000 + 5 * 3600000);
+      var mins = t.getHours() * 60 + t.getMinutes();
+      var isOpen = mins >= 480 && mins < 1380;
+      document.getElementById('status').classList.toggle('is-closed', !isOpen);
+      document.getElementById('status-text').textContent = !isOpen ? d.closed : (mins >= 1320 ? d.soon : d.open);
+    }
+
+    function apply(l) {
+      lang = l; var d = DICT[l];
+      document.documentElement.lang = l;
+      document.title = d.title;
+      document.querySelectorAll('[data-i18n]').forEach(function (el) { var v = d[el.dataset.i18n]; if (v) el.textContent = v; });
+      document.querySelectorAll('[data-i18n-ph]').forEach(function (el) { el.placeholder = d[el.dataset.i18nPh]; });
+      document.querySelectorAll('[data-i18n-aria]').forEach(function (el) { el.setAttribute('aria-label', d[el.dataset.i18nAria]); });
+      document.querySelectorAll('.lang button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === l)); });
+      document.querySelectorAll('a[href^="../"]').forEach(function (a) {
+        var hash = a.getAttribute('href').split('#')[1];
+        a.setAttribute('href', '../' + (l === 'ru' ? '' : '?lang=' + l) + (hash ? '#' + hash : ''));
+      });
+      updateStatus();
+    }
+    document.querySelectorAll('.lang button').forEach(function (b) {
+      b.addEventListener('click', function () { set('bp-lang', b.dataset.lang); apply(b.dataset.lang); });
+    });
+
+    // Волна при нажатии
+    document.querySelectorAll('.link, .quick a').forEach(function (el) {
+      el.addEventListener('pointerdown', function (e) {
+        if (reduce) return;
+        var r = el.getBoundingClientRect(), size = Math.max(r.width, r.height);
+        var s = document.createElement('span');
+        s.className = 'ripple';
+        s.style.width = s.style.height = size + 'px';
+        s.style.left = (e.clientX - r.left - size / 2) + 'px';
+        s.style.top = (e.clientY - r.top - size / 2) + 'px';
+        el.appendChild(s);
+        setTimeout(function () { s.remove(); }, 650);
+      });
+    });
+
+    // Поделиться
+    var toast = document.getElementById('toast');
+    document.getElementById('share').addEventListener('click', function () {
+      var url = location.href.split('?')[0];
+      if (navigator.share) { navigator.share({ title: 'Broccoli Park', url: url }).catch(function () {}); return; }
+      if (navigator.clipboard) navigator.clipboard.writeText(url).then(function () {
+        toast.textContent = DICT[lang].copied; toast.classList.add('is-shown');
+        setTimeout(function () { toast.classList.remove('is-shown'); }, 2200);
+      });
+    });
+
+
+    /* ================= Бронирование в модальном окне ================= */
+    var modal = document.getElementById('booking');
+    var sheet = modal.querySelector('.sheet');
+    var form = document.getElementById('bform');
+    var f = { name: document.getElementById('b-name'), phone: document.getElementById('b-phone'), date: document.getElementById('b-date'),
+              time: document.getElementById('b-time'), guests: document.getElementById('b-guests'), comment: document.getElementById('b-comment') };
+    var submitBtn = sheet.querySelector('.submit');
+    var formErr = document.getElementById('b-form-err');
+    var lastFocus = null, closeTimer = null;
+    // Адрес обработчика (server.js). На хостинге замените на URL своей функции.
+    var BOOKING_ENDPOINT = '../api/booking';
+
+    function isoDate(offset) { var d = new Date(); d.setDate(d.getDate() + offset); d.setMinutes(d.getMinutes() - d.getTimezoneOffset()); return d.toISOString().slice(0, 10); }
+    f.date.min = isoDate(0);
+    f.date.value = isoDate(0);
+    document.getElementById('b-quickdate').addEventListener('change', function (e) {
+      var v = e.target.value;
+      if (v === 'x') { f.date.hidden = false; f.date.value = isoDate(2); f.date.focus(); try { f.date.showPicker(); } catch (err) {} }
+      else { f.date.hidden = true; f.date.value = isoDate(+v); }
+      check('date');
+    });
+
+    function openModal(e) {
+      if (e) e.preventDefault();
+      clearTimeout(closeTimer);
+      lastFocus = document.activeElement;
+      sheet.classList.remove('is-done');
+      modal.hidden = false;
+      document.body.classList.add('modal-open');
+      // Запись в историю: системная кнопка/жест «Назад» на телефоне закрывает форму, а не уводит со страницы
+      if (!history.state || !history.state.booking) history.pushState({ booking: true }, '', '#booking');
+      requestAnimationFrame(function () { requestAnimationFrame(function () { modal.classList.add('is-open'); }); });
+      setTimeout(function () { (window.innerWidth < 600 ? sheet.querySelector('.sheet__back') : f.name).focus({ preventScroll: true }); }, 350);
+    }
+    function hideModal() {
+      modal.classList.remove('is-open');
+      document.body.classList.remove('modal-open');
+      closeTimer = setTimeout(function () { modal.hidden = true; }, reduce ? 0 : 450);
+      if (lastFocus) lastFocus.focus({ preventScroll: true });
+    }
+    function closeModal() {
+      if (history.state && history.state.booking) history.back(); // hideModal вызовется из popstate
+      else hideModal();
+    }
+    window.addEventListener('popstate', function () { if (!modal.hidden) hideModal(); });
+
+    document.querySelectorAll('[data-open-booking]').forEach(function (a) { a.addEventListener('click', openModal); });
+    modal.addEventListener('click', function (e) { if (e.target.closest('[data-close]')) closeModal(); });
+    document.addEventListener('keydown', function (e) {
+      if (modal.hidden) return;
+      if (e.key === 'Escape') closeModal();
+      if (e.key === 'Tab') { // фокус не выходит за пределы окна
+        var items = Array.prototype.filter.call(sheet.querySelectorAll('button, a[href], input:not([hidden]):not([tabindex="-1"]), textarea'), function (el) { return el.offsetParent !== null; });
+        var first = items[0], last = items[items.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+    if (location.hash === '#booking') { history.replaceState(null, '', location.pathname + location.search); openModal(); }
+
+    // Маска телефона: +998 __ ___ __ __
+    function fmtPhone(v) {
+      var d = v.replace(/\D/g, ''); if (d.indexOf('998') === 0) d = d.slice(3); d = d.slice(0, 9);
+      var o = '+998'; if (d.length) o += ' ' + d.slice(0, 2); if (d.length > 2) o += ' ' + d.slice(2, 5);
+      if (d.length > 5) o += ' ' + d.slice(5, 7); if (d.length > 7) o += ' ' + d.slice(7, 9); return o;
+    }
+    f.phone.addEventListener('focus', function () { if (!f.phone.value) f.phone.value = '+998 '; });
+    f.phone.addEventListener('blur', function () { if (f.phone.value.replace(/\D/g, '').length <= 3) f.phone.value = ''; });
+    f.phone.addEventListener('input', function () { f.phone.value = fmtPhone(f.phone.value); });
+
+    sheet.querySelectorAll('[data-step]').forEach(function (b) {
+      b.addEventListener('click', function () { f.guests.value = Math.min(50, Math.max(1, (parseInt(f.guests.value, 10) || 0) + +b.dataset.step)); check('guests'); });
+    });
+
+    var rules = {
+      name: function () { return f.name.value.trim().length >= 2 ? '' : 'eName'; },
+      phone: function () { return /^\+998 \d{2} \d{3} \d{2} \d{2}$/.test(f.phone.value) ? '' : 'ePhone'; },
+      date: function () { return f.date.value && f.date.value >= isoDate(0) ? '' : 'eDate'; },
+      time: function () { return f.time.value >= '08:00' && f.time.value <= '22:00' ? '' : 'eTime'; },
+      guests: function () { var g = +f.guests.value; return g >= 1 && g <= 50 && g % 1 === 0 ? '' : 'eGuests'; }
+    };
+    function check(key) {
+      var k = rules[key](), msg = k ? DICT[lang][k] : '';
+      f[key].closest('.fld').classList.toggle('bad', !!k);
+      f[key].setAttribute('aria-invalid', String(!!k));
+      document.getElementById('b-' + key + '-err').textContent = msg;
+      return !k;
+    }
+    Object.keys(rules).forEach(function (key) {
+      f[key].addEventListener('input', function () { if (f[key].closest('.fld').classList.contains('bad')) check(key); });
+      f[key].addEventListener('blur', function () { if (f[key].value) check(key); });
+    });
+
+    function message(data) {
+      var d = DICT[lang];
+      var lines = [d.msgHead, d.fName + ': ' + data.name, d.fPhone + ': ' + data.phone,
+        d.fDate + ': ' + data.date.split('-').reverse().join('.') + ', ' + data.time,
+        d.fGuests + ': ' + data.guests, d.fZone + ': ' + d[data.zone]];
+      if (data.comment) lines.push(d.fComment + ': ' + data.comment);
+      return lines.join('\n');
+    }
+    function showDone(sent, msg) {
+      var d = DICT[lang];
+      document.getElementById('done-title').textContent = sent ? d.sentTitle : d.fbTitle;
+      document.getElementById('done-text').textContent = sent ? d.sentText : d.fbText;
+      var pre = document.getElementById('done-msg'); pre.hidden = sent; pre.textContent = msg;
+      document.getElementById('done-tg').hidden = sent;
+      sheet.classList.add('is-done');
+      sheet.querySelector('.sheet__body').scrollTop = 0;
+    }
+    function copyText(t) { try { if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(t).catch(function () {}); } catch (e) {} return Promise.resolve(); }
+    function setLoading(on) {
+      submitBtn.disabled = on; submitBtn.classList.toggle('is-loading', on);
+      document.getElementById('b-submit-label').textContent = DICT[lang][on ? 'sending' : 'submit'];
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var ok = Object.keys(rules).map(check).every(Boolean);
+      if (!ok) {
+        formErr.textContent = DICT[lang].eForm;
+        var bad = form.querySelector('[aria-invalid="true"]:not([hidden])'); if (bad) bad.focus();
+        return;
+      }
+      formErr.textContent = '';
+      var data = { name: f.name.value.trim(), phone: f.phone.value, date: f.date.value, time: f.time.value,
+        guests: f.guests.value, zone: form.querySelector('input[name="zone"]:checked').value,
+        comment: f.comment.value.trim(), lang: lang, website: form.querySelector('input[name="website"]').value };
+      var msg = message(data);
+      function fallback() { copyText(msg).then(function () { showDone(false, msg); }); }
+      if (location.protocol.indexOf('http') !== 0) { fallback(); return; }
+
+      setLoading(true);
+      var ctrl = window.AbortController ? new AbortController() : null;
+      var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, 12000);
+      fetch(BOOKING_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data), signal: ctrl ? ctrl.signal : undefined })
+        .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { status: r.status, ok: j && j.ok }; }); })
+        .then(function (res) {
+          if (res.ok) { showDone(true, msg); form.reset(); f.date.value = isoDate(0); f.date.hidden = true; f.time.value = '19:00'; f.guests.value = 2; }
+          else if (res.status === 429) formErr.textContent = DICT[lang].eRate;
+          else fallback();
+        })
+        .catch(fallback)
+        .then(function () { clearTimeout(timer); setLoading(false); });
+    });
+
+    apply(detect());
+    setInterval(updateStatus, 60000);
+  })();
+  </script>
+</body>
+</html>

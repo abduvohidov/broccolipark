@@ -1,0 +1,11 @@
+{
+  "name": "broccolipark-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Лендинг Broccoli Park + отправка броней в Telegram",
+  "scripts": {
+    "start": "node server.js",
+    "build:i18n": "node tools/build-i18n.js"
+  },
+  "engines": { "node": ">=14" }
+}

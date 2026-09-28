@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="ru" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Broccoli Park — атмосферный ресторан в центре Ташкента</title>
+  <meta name="description" content="Завтраки с 08:00, бистро с линией раздачи на 120+ блюд, ресторан с живой музыкой, летняя терраса и детская комната. Ул. Шахрисабз, 31Б. Бронь: +998 95 501 10 10.">
+  <meta name="theme-color" content="#1F3D2B">
+  <link rel="canonical" href="https://broccolipark.uz/">
+
+  <!-- hreflang: одна страница, язык выбирается параметром ?lang= -->
+  <link rel="alternate" hreflang="ru" href="https://broccolipark.uz/?lang=ru">
+  <link rel="alternate" hreflang="en" href="https://broccolipark.uz/?lang=en">
+  <link rel="alternate" hreflang="uz" href="https://broccolipark.uz/?lang=uz">
+  <link rel="alternate" hreflang="x-default" href="https://broccolipark.uz/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:site_name" content="Broccoli Park">
+  <meta property="og:title" content="Broccoli Park — атмосферный ресторан в центре Ташкента">
+  <meta property="og:description" content="Завтраки с 08:00, бистро с линией раздачи на 120+ блюд, ресторан с живой музыкой, летняя терраса и детская комната. Ул. Шахрисабз, 31Б. Бронь: +998 95 501 10 10.">
+  <meta property="og:url" content="https://broccolipark.uz/">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="uz_UZ">
+  <!-- REPLACE: реальное фото для превью в соцсетях (1200×630) -->
+  <meta property="og:image" content="https://broccolipark.uz/img/hero.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="960">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%233E7C4F'/%3E%3Cpath d='M44 18c-14 0-24 8-24 20 0 3 .8 5.6 2 7.6C24 34 32 28 40 26c-7 4-13 10-16 21 2 1 4.5 1.5 7 1.5 12 0 17-12 13-30.5Z' fill='%23A8D5A2'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://www.afisha.uz/uploads/media/2021/11/0875452.jpeg" fetchpriority="high" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Ранний перехват ошибок загрузки картинок: запасной URL → затем стильная заглушка -->
+  <script>
+    document.addEventListener('error', function (e) {
+      var img = e.target;
+      if (!img || img.tagName !== 'IMG') return;
+      // data-fallback="url1|url2" — пробуем запасные адреса по очереди
+      var list = (img.getAttribute('data-fallback') || '').split('|').filter(Boolean);
+      var step = +(img.dataset.fbStep || 0);
+      var pic = img.parentElement && img.parentElement.tagName === 'PICTURE' ? img.parentElement : null;
+      if (step < list.length) {
+        img.dataset.fbStep = step + 1;
+        if (pic) Array.prototype.forEach.call(pic.querySelectorAll('source'), function (s) { s.remove(); });
+        img.removeAttribute('srcset'); img.src = list[step]; return;
+      }
+      img.classList.add('is-broken');
+      var box = pic ? pic.parentElement : img.parentElement;
+      if (box) box.classList.add('img-failed');
+    }, true);
+  </script>
+
+  <!-- schema.org / Restaurant -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Broccoli Park",
+    "alternateName": "Брокколи Парк",
+    "url": "https://broccolipark.uz/",
+    "image": "https://broccolipark.uz/img/hero.jpg",
+    "description": "Атмосферный ресторан в центре Ташкента: бистро с линией раздачи на 120+ блюд, ресторан с живой музыкой, летняя терраса и детская комната.",
+    "telephone": "+998955011010",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ул. Шахрисабз, 31Б",
+      "addressLocality": "Ташкент",
+      "addressRegion": "Мирзо-Улугбекский район",
+      "addressCountry": "UZ"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 41.31207, "longitude": 69.28537 },
+    "hasMap": "https://yandex.uz/maps/org/broccoli_park/178977758143/",
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "08:00",
+      "closes": "23:00"
+    }],
+    "servesCuisine": ["Европейская", "Итальянская", "Узбекская", "Грузинская", "Здоровое питание"],
+    "priceRange": "100 000 – 150 000 UZS",
+    "currenciesAccepted": "UZS",
+    "acceptsReservations": "True",
+    "menu": "https://broccolipark.uz/#menu",
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "bestRating": "5", "ratingCount": "2006", "reviewCount": "656" },
+    "sameAs": [
+      "https://www.instagram.com/broccolipark.uz",
+      "https://t.me/broccoli_uz",
+      "https://www.facebook.com/broccolipark.uz",
+      "https://yandex.uz/maps/org/broccoli_park/178977758143/"
+    ]
+  }
+  </script>
+
+  <script src="data/menu.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- ======= Иконки (Lucide, inline SVG sprite) ======= -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+      <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+      <symbol id="i-trees" viewBox="0 0 24 24"><path d="M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z"/><path d="M7 16v6M13 19v3"/><path d="M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5"/></symbol>
+      <symbol id="i-baby" viewBox="0 0 24 24"><path d="M9 12h.01M15 12h.01M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"/><path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1"/></symbol>
+      <symbol id="i-salad" viewBox="0 0 24 24"><path d="M7 21h10"/><path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z"/><path d="M11.38 12a2.4 2.4 0 0 1-.4-4.77 2.4 2.4 0 0 1 3.2-2.77 2.4 2.4 0 0 1 3.47-.63 2.4 2.4 0 0 1 3.37 3.37 2.4 2.4 0 0 1-1.1 3.7 2.51 2.51 0 0 1 .03 1.1"/><path d="m13 12 4-4"/><path d="M10.9 7.25A3.99 3.99 0 0 0 4 10c0 .73.2 1.41.54 2"/></symbol>
+      <symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+      <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+      <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+      <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+      <symbol id="i-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7M12 19V5"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></symbol>
+      <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
+      <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+      <symbol id="i-utensils" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+      <symbol id="i-nav" viewBox="0 0 24 24"><path d="M3 11 22 2l-9 19-2-8-8-2z"/></symbol>
+      <symbol id="i-chef" viewBox="0 0 24 24"><path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.46.32-.84.73-1.04a4 4 0 0 0-2.13-7.59 5 5 0 0 0-9.19 0 4 4 0 0 0-2.13 7.59c.41.2.72.58.72 1.04V20a1 1 0 0 0 1 1Z"/><path d="M6 17h12"/></symbol>
+      <symbol id="i-coffee" viewBox="0 0 24 24"><path d="M10 2v2M14 2v2M6 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/></symbol>
+      <symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
+      <symbol id="i-soup" viewBox="0 0 24 24"><path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z"/><path d="M7 21h10M19.5 12 22 6"/><path d="M16.25 3c.27.1.8.53.75 1.36-.06.83-.93 1.2-1 2.02-.05.78.34 1.24.73 1.62M11.25 3c.27.1.8.53.74 1.36-.05.83-.93 1.2-.98 2.02-.06.78.33 1.24.72 1.62M6.25 3c.27.1.8.53.75 1.36-.06.83-.93 1.2-1 2.02-.05.78.34 1.24.74 1.62"/></symbol>
+      <symbol id="i-pizza" viewBox="0 0 24 24"><path d="M15 11h.01M11 15h.01M16 16h.01"/><path d="m2 16 20 6-6-20A20 20 0 0 0 2 16"/><path d="M5.71 17.11a17.04 17.04 0 0 1 11.4-11.4"/></symbol>
+      <symbol id="i-cake" viewBox="0 0 24 24"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1M2 21h20M7 8v3M12 8v3M17 8v3M7 4h.01M12 4h.01M17 4h.01"/></symbol>
+      <symbol id="i-cup" viewBox="0 0 24 24"><path d="m6 8 1.75 12.28a2 2 0 0 0 2 1.72h4.54a2 2 0 0 0 2-1.72L18 8M5 8h14M7 15a6.47 6.47 0 0 1 5 0 6.47 6.47 0 0 0 5 0M12 8l1-6h2"/></symbol>
+      <symbol id="i-wheat" viewBox="0 0 24 24"><path d="M2 22 16 8"/><path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94ZM7.47 8.53 9 7l1.53 1.53a3.5 3.5 0 0 1 0 4.94L9 15l-1.53-1.53a3.5 3.5 0 0 1 0-4.94ZM11.47 4.53 13 3l1.53 1.53a3.5 3.5 0 0 1 0 4.94L13 11l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M20 2h2v2a4 4 0 0 1-4 4h-2V6a4 4 0 0 1 4-4Z"/></symbol>
+      <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.94 15.5A2 2 0 0 0 8.5 14.06l-6.14-1.58a.5.5 0 0 1 0-.96L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.14a.5.5 0 0 1 .96 0l1.58 6.14a2 2 0 0 0 1.44 1.44l6.14 1.58a.5.5 0 0 1 0 .96l-6.14 1.58a2 2 0 0 0-1.44 1.44l-1.58 6.14a.5.5 0 0 1-.96 0z"/><path d="M20 3v4M22 5h-4"/></symbol>
+      <symbol id="i-glass" viewBox="0 0 24 24"><path d="M8 22h8M7 10h10M12 15v7"/><path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"/></symbol>
+      <symbol id="i-party" viewBox="0 0 24 24"><path d="M5.8 11.3 2 22l10.7-3.79"/><path d="M4 3h.01M22 8h.01M15 2h.01M22 20h.01"/><path d="m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10"/><path d="m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11-.11.7-.72 1.22-1.43 1.22H17"/><path d="m11 2 .33.82c.34.86-.2 1.82-1.11 1.98-.7.1-1.22.72-1.22 1.43V7"/><path d="M11 13c1.93 1.93 2.83 4.17 2 5-.83.83-3.07-.07-5-2-1.93-1.93-2.83-4.17-2-5 .83-.83 3.07.07 5 2Z"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+      <symbol id="i-parking" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></symbol>
+      <symbol id="i-train" viewBox="0 0 24 24"><rect width="16" height="16" x="4" y="3" rx="2"/><path d="M4 11h16M12 3v8M8 19l-2 3M18 22l-2-3M8 15h.01M16 15h.01"/></symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+      <!-- Декоративный силуэт брокколи -->
+      <symbol id="deco-broccoli" viewBox="0 0 120 140"><path fill="currentColor" d="M60 8c10 0 18 6 21 14 11-2 22 6 22 18 0 3-.6 5.7-1.8 8.2C108 52 112 59 112 67c0 13-10 22-23 22-4 0-8-1-11-3l-6 50H48l-6-50c-3 2-7 3-11 3C18 89 8 80 8 67c0-8 4-15 10-18.8C16.6 45.7 16 43 16 40c0-12 11-20 22-18 3-8 11-14 22-14Z"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#main" data-i18n="skip">Перейти к содержанию</a>
+
+  <!-- ================= 5.1 ШАПКА ================= -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="logo" href="#top" aria-label="Broccoli Park — на главную" data-i18n-attr="aria-label:logo.aria">
+        <span class="logo__mark" aria-hidden="true"><svg class="ico"><use href="#i-leaf"/></svg></span>
+        <span class="logo__text">Broccoli<b>Park</b></span>
+      </a>
+
+      <nav class="nav" aria-label="Основная навигация" data-i18n-attr="aria-label:nav.aria">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#about" data-i18n="nav.about">О нас</a></li>
+          <li><a class="nav__link" href="#menu" data-i18n="nav.menu">Меню</a></li>
+          <li><a class="nav__link" href="#breakfast" data-i18n="nav.breakfast">Завтраки</a></li>
+          <li><a class="nav__link" href="#family" data-i18n="nav.family">Для семей</a></li>
+          <li><a class="nav__link" href="#reviews" data-i18n="nav.reviews">Отзывы</a></li>
+          <li><a class="nav__link" href="#contacts" data-i18n="nav.contacts">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <div class="lang" role="group" aria-label="Язык сайта" data-i18n-attr="aria-label:header.lang">
+          <button class="lang__btn" type="button" data-lang="ru" aria-pressed="true" lang="ru">RU</button>
+          <button class="lang__btn" type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+          <button class="lang__btn" type="button" data-lang="uz" aria-pressed="false" lang="uz">UZ</button>
+        </div>
+        <a class="header__phone" href="tel:+998955011010" aria-label="Позвонить для брони: +998 95 501 10 10" data-i18n-attr="title:header.call">
+          <svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>
+          <span class="header__phone-text">+998 95 501 10 10</span>
+        </a>
+        <a class="btn btn--primary btn--sm header__book" href="#booking" data-i18n="header.book">Забронировать стол</a>
+        <button class="burger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню" data-i18n-attr="aria-label:header.menuOpen">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Полноэкранное мобильное меню -->
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <div class="mobile-menu__bg" aria-hidden="true"><svg><use href="#deco-broccoli"/></svg></div>
+    <nav class="mobile-menu__nav" aria-label="Основная навигация" data-i18n-attr="aria-label:nav.aria">
+      <a href="#about" data-i18n="nav.about">О нас</a>
+      <a href="#menu" data-i18n="nav.menu">Меню</a>
+      <a href="#breakfast" data-i18n="nav.breakfast">Завтраки</a>
+      <a href="#family" data-i18n="nav.family">Для семей</a>
+      <a href="#reviews" data-i18n="nav.reviews">Отзывы</a>
+      <a href="#contacts" data-i18n="nav.contacts">Контакты</a>
+    </nav>
+    <div class="mobile-menu__footer">
+      <a class="btn btn--primary btn--block" href="#booking" data-i18n="header.book">Забронировать стол</a>
+      <a class="btn btn--ghost-light btn--block" href="tel:+998955011010"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg> +998 95 501 10 10</a>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- ================= 5.2 HERO ================= -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__media" aria-hidden="true">
+        <!-- Фото из статьи afisha.uz — оригинал в полном размере (без «_m»).
+             REPLACE: для продакшена скачайте его в img/hero-afisha.jpg и укажите src="img/hero-afisha.jpg":
+             чужой сервер может ограничить показ. Используйте с разрешения afisha.uz / ресторана.
+             Запасные варианты по порядку: уменьшенная копия afisha → своё фото зала (img/hero.jpg) -->
+        <img class="hero__img" src="https://www.afisha.uz/uploads/media/2021/11/0875452.jpeg"
+             data-fallback="https://www.afisha.uz/uploads/media/2021/11/0875452_m.jpeg|img/hero.jpg"
+             alt="" fetchpriority="high" decoding="async" referrerpolicy="no-referrer">
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <!-- Декор: плавающие листья и брокколи -->
+      <div class="hero__deco" aria-hidden="true">
+        <svg class="float float--1"><use href="#deco-broccoli"/></svg>
+        <svg class="float float--2 ico-leaf"><use href="#i-leaf"/></svg>
+        <svg class="float float--3 ico-leaf"><use href="#i-leaf"/></svg>
+        <svg class="float float--4"><use href="#deco-broccoli"/></svg>
+        <svg class="float float--5 ico-leaf"><use href="#i-leaf"/></svg>
+      </div>
+
+      <div class="container hero__content">
+        <p class="hero__eyebrow hero-in" style="--i:0" data-i18n="hero.eyebrow">Ресторан · Бистро · Терраса</p>
+        <h1 class="hero__title hero-in" style="--i:1" id="hero-title" data-i18n="hero.title">Атмосферный ресторан в самом центре Ташкента</h1>
+        <p class="hero__subtitle hero-in" style="--i:2" data-i18n="hero.subtitle">Завтраки, обеды и ужины с заботой о каждом. Бистро днём, ресторан вечером.</p>
+        <div class="hero__ctas hero-in" style="--i:3">
+          <a class="btn btn--primary btn--lg" href="#booking"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg><span data-i18n="hero.ctaBook">Забронировать стол</span></a>
+          <a class="btn btn--outline-light btn--lg" href="#menu"><span data-i18n="hero.ctaMenu">Смотреть меню</span></a>
+        </div>
+        <ul class="hero__badges hero-in" style="--i:4">
+          <li class="badge-glass">
+            <svg class="ico ico--accent" aria-hidden="true"><use href="#i-star"/></svg>
+            <span><b data-i18n="hero.badgeRating">5.0 на Яндекс Картах</b> <span class="muted-light" data-i18n="hero.badgeRatingSub">2000+ оценок</span></span>
+          </li>
+          <li class="badge-glass"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg><span data-i18n="hero.badgeHours">Ежедневно 08:00–23:00</span></li>
+          <li class="badge-glass"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span data-i18n="hero.badgeAddress">ул. Шахрисабз, 31Б</span></li>
+        </ul>
+      </div>
+
+      <a class="hero__scroll" href="#about" aria-label="Листайте вниз" data-i18n-attr="aria-label:hero.scroll">
+        <span class="hero__mouse" aria-hidden="true"><span></span></span>
+      </a>
+    </section>
+
+    <!-- ================= 5.3 БЕГУЩАЯ СТРОКА ================= -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <!-- Содержимое дублируется скриптом для бесшовной прокрутки -->
+        <div class="marquee__group">
+          <span data-i18n="marquee.1">Завтраки</span><i>•</i>
+          <span data-i18n="marquee.2">Живая музыка</span><i>•</i>
+          <span data-i18n="marquee.3">Летняя терраса</span><i>•</i>
+          <span data-i18n="marquee.4">Детская комната</span><i>•</i>
+          <span data-i18n="marquee.5">Доставка</span><i>•</i>
+          <span data-i18n="marquee.6">Ланч-сеты</span><i>•</i>
+          <span data-i18n="marquee.7">Банкеты</span><i>•</i>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= 5.4 О НАС ================= -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker" data-i18n="about.kicker">О нас</p>
+          <h2 class="h2" id="about-title" data-i18n="about.title">Два формата в одном месте</h2>
+          <p class="lead" data-i18n="about.lead">Забегите на быстрый обед или останьтесь на долгий ужин — у нас есть и то, и другое.</p>
+        </header>
+
+        <div class="formats">
+          <article class="format-card reveal" style="--d:0">
+            <div class="format-card__media">
+              <!-- REPLACE: реальное фото — бистро / линия раздачи на 1 этаже -->
+              <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1600&q=80" srcset="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=640&q=80 640w, https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80 1200w, https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1600&q=80 1600w" sizes="(min-width:768px) 50vw, 100vw" alt="Бистро на первом этаже" data-i18n-attr="alt:about.f1.alt" loading="lazy" decoding="async" width="1000" height="700">
+              <span class="format-card__label" data-i18n="about.f1.label">1 этаж</span>
+            </div>
+            <div class="format-card__body">
+              <h3 class="h3" data-i18n="about.f1.title">Бистро</h3>
+              <p data-i18n="about.f1.text">Самая большая линия раздачи в Ташкенте: выбирайте глазами, ешьте с удовольствием.</p>
+              <ul class="checklist">
+                <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="about.f1.l1">Более 120 блюд каждый день</span></li>
+                <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="about.f1.l2">Быстрый обед за 15 минут</span></li>
+                <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="about.f1.l3">Ланч-сеты по 75 000 сум</span></li>
+              </ul>
+            </div>
+          </article>
+          <article class="format-card reveal" style="--d:1">
+            <div class="format-card__media">
+              <!-- REPLACE: реальное фото — ресторан на 2 этаже вечером -->
+              <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1600&q=80" srcset="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=640&q=80 640w, https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=80 1200w, https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1600&q=80 1600w" sizes="(min-width:768px) 50vw, 100vw" alt="Ресторан на втором этаже вечером" data-i18n-attr="alt:about.f2.alt" loading="lazy" decoding="async" width="1000" height="700">
+              <span class="format-card__label format-card__label--dark" data-i18n="about.f2.label">2 этаж</span>
+            </div>
+            <div class="format-card__body">
+              <h3 class="h3" data-i18n="about.f2.title">Ресторан</h3>
+              <p data-i18n="about.f2.text">Авторская кухня, бар и тёплый свет — место для свиданий, встреч и праздников.</p>
+              <ul class="checklist">
+                <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="about.f2.l1">Стейки, паста, мангал</span></li>
+                <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="about.f2.l2">Бар и авторские напитки</span></li>
+                <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="about.f2.l3">Живая музыка по вечерам</span></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <!-- Счётчики -->
+        <ul class="stats">
+          <li class="stat reveal" style="--d:0"><span class="stat__num"><span data-count="5" data-decimals="1">5.0</span></span><span class="stat__label" data-i18n="stats.rating">рейтинг на Яндекс Картах</span></li>
+          <li class="stat reveal" style="--d:1"><span class="stat__num"><span data-count="2000">2000</span>+</span><span class="stat__label" data-i18n="stats.reviews">оценок от гостей</span></li>
+          <li class="stat reveal" style="--d:2"><span class="stat__num"><span data-count="120">120</span>+</span><span class="stat__label" data-i18n="stats.dishes">блюд ежедневно в бистро</span></li>
+          <li class="stat reveal" style="--d:3"><span class="stat__num"><span data-count="280">280</span>+</span><span class="stat__label" data-i18n="stats.menu">позиций в меню</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= 5.5 ПРЕИМУЩЕСТВА ================= -->
+    <section class="section section--cream" aria-labelledby="features-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker" data-i18n="features.kicker">Почему к нам</p>
+          <h2 class="h2" id="features-title" data-i18n="features.title">Место, куда хочется возвращаться</h2>
+        </header>
+        <ul class="features">
+          <li class="feature reveal" style="--d:0"><span class="feature__icon"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg></span><h3 class="feature__title" data-i18n="features.1.title">Центр города</h3><p data-i18n="features.1.text">2 минуты от метро Amir Temur xiyoboni, среди деревьев и тишины.</p></li>
+          <li class="feature reveal" style="--d:1"><span class="feature__icon"><svg class="ico" aria-hidden="true"><use href="#i-music"/></svg></span><h3 class="feature__title" data-i18n="features.2.title">Живая музыка</h3><p data-i18n="features.2.text">По вечерам примерно с 20:30 — живые голоса и шоу-программа.</p></li>
+          <li class="feature reveal" style="--d:2"><span class="feature__icon"><svg class="ico" aria-hidden="true"><use href="#i-trees"/></svg></span><h3 class="feature__title" data-i18n="features.3.title">Летняя терраса</h3><p data-i18n="features.3.text">Тень деревьев и охлаждающий туман — прохладно даже в июльскую жару.</p></li>
+          <li class="feature reveal" style="--d:3"><span class="feature__icon"><svg class="ico" aria-hidden="true"><use href="#i-baby"/></svg></span><h3 class="feature__title" data-i18n="features.4.title">Детям — отдельный мир</h3><p data-i18n="features.4.text">Бесплатная игровая, пеленальный столик, детское меню и раскраски.</p></li>
+          <li class="feature reveal" style="--d:4"><span class="feature__icon"><svg class="ico" aria-hidden="true"><use href="#i-salad"/></svg></span><h3 class="feature__title" data-i18n="features.5.title">Здоровое питание</h3><p data-i18n="features.5.text">ПП-блюда, еда на пару и вегетарианские позиции — вкусно и легко.</p></li>
+          <li class="feature reveal" style="--d:5"><span class="feature__icon"><svg class="ico" aria-hidden="true"><use href="#i-truck"/></svg></span><h3 class="feature__title" data-i18n="features.6.title">Доставка и навынос</h3><p data-i18n="features.6.text">Кофе с собой, быстрая доставка и Wi-Fi, если нужно поработать.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= 5.6 МЕНЮ ================= -->
+    <section class="section menu" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <header class="section-head section-head--row reveal">
+          <div>
+            <p class="kicker" data-i18n="menu.kicker">Меню</p>
+            <h2 class="h2" id="menu-title" data-i18n="menu.title">Что сегодня на столе</h2>
+            <p class="lead" data-i18n="menu.lead">280+ позиций: от сырников и боулов до стейков и мангала.</p>
+          </div>
+          <div class="search" role="search">
+            <label class="visually-hidden" for="menu-search" data-i18n="menu.searchLabel">Поиск по меню</label>
+            <svg class="ico search__icon" aria-hidden="true"><use href="#i-search"/></svg>
+            <input class="search__input" id="menu-search" type="search" autocomplete="off" enterkeyhint="search"
+                   placeholder="Найти блюдо или ингредиент…" data-i18n-attr="placeholder:menu.searchPh">
+            <button class="search__clear" type="button" hidden aria-label="Очистить поиск" data-i18n-attr="aria-label:menu.clear"><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg></button>
+          </div>
+        </header>
+
+        <div class="tabs-wrap">
+          <div class="tabs" role="tablist" aria-label="Категории меню" data-i18n-attr="aria-label:menu.tabsLabel" id="menu-tabs">
+            <!-- Табы генерируются из MENU_CATEGORIES (data/menu.js) -->
+            <span class="tabs__indicator" aria-hidden="true"></span>
+          </div>
+        </div>
+
+        <p class="menu__status" id="menu-status" aria-live="polite"></p>
+        <div class="menu__panel" id="menu-panel" role="tabpanel" tabindex="0">
+          <noscript><p>Для просмотра меню включите JavaScript или позвоните: +998 95 501 10 10.</p></noscript>
+        </div>
+        <div class="menu__more">
+          <button class="btn btn--outline" type="button" id="menu-more" hidden></button>
+        </div>
+        <p class="menu__note"><svg class="ico" aria-hidden="true"><use href="#i-sparkles"/></svg><span data-i18n="menu.note">Цены могут отличаться. Актуальное меню уточняйте у официанта.</span></p>
+      </div>
+    </section>
+
+    <!-- ================= 5.7 ЗАВТРАКИ И ЛАНЧ-СЕТЫ ================= -->
+    <section class="section section--cream" id="breakfast" aria-labelledby="breakfast-title">
+      <div class="container breakfast">
+        <div class="breakfast__left">
+          <header class="section-head section-head--left reveal">
+            <p class="kicker" data-i18n="breakfast.kicker">Утро в парке</p>
+            <h2 class="h2" id="breakfast-title" data-i18n="breakfast.title">Завтраки с 08:00</h2>
+            <p class="lead" data-i18n="breakfast.text">Шакшука, бенедикты на круассане, сырники и каши — начните день неспешно, с хорошим кофе.</p>
+          </header>
+          <!-- Фото завтраков из меню Wolt. REPLACE: при желании заменить на собственные фото -->
+          <ul class="breakfast__grid">
+            <li class="dish-photo reveal" style="--d:0"><figure><div class="dish-photo__img"><img src="https://imageproxy.wolt.com/menu/menu-images/66c47cfdeb8e04b64c44631d/2e92a990-cebc-11f0-ab89-fa851cb0b4ca_3f380c2a_83e9_4196_a2fc_20d4ddb3fd1c?w=1200" srcset="https://imageproxy.wolt.com/menu/menu-images/66c47cfdeb8e04b64c44631d/2e92a990-cebc-11f0-ab89-fa851cb0b4ca_3f380c2a_83e9_4196_a2fc_20d4ddb3fd1c?w=600 600w, https://imageproxy.wolt.com/menu/menu-images/66c47cfdeb8e04b64c44631d/2e92a990-cebc-11f0-ab89-fa851cb0b4ca_3f380c2a_83e9_4196_a2fc_20d4ddb3fd1c?w=1200 1200w" sizes="(min-width:1280px) 200px, (min-width:1024px) 30vw, 50vw" alt="Завтрак Брокколи" data-dish="bp004" loading="lazy" decoding="async" width="600" height="600"></div><figcaption><span data-dish-name="bp004">Завтрак Брокколи</span><b data-dish-price="bp004"></b></figcaption></figure></li>
+            <li class="dish-photo reveal" style="--d:1"><figure><div class="dish-photo__img"><img src="https://imageproxy.wolt.com/menu/menu-images/66c47cfdeb8e04b64c44631d/2e952044-cebc-11f0-ab89-fa851cb0b4ca_f36570b1_7752_462b_9098_0ca5b0527305?w=1200" srcset="https://imageproxy.wolt.com/menu/menu-images/66c47cfdeb8e04b64c44631d/2e952044-cebc-11f0-ab89-fa851cb0b4ca_f36570b1_7752_462b_9098_0ca5b0527305?w=600 600w, https://imageproxy.wolt.com/menu/menu-images/66c47cfdeb8e04b64c44631d/2e952044-cebc-11f0-ab89-fa851cb0b4ca_f36570b1_7752_462b_9098_0ca5b0527305?w=1200 1200w" sizes="(min-width:1280px) 200px, (min-width:1024px) 30vw, 50vw" alt="Бенедикт с лососем" data-dish="bp006" loading="lazy" decoding="async" width="600" height="600"></div><figcaption><span data-dish-name="bp006">Бенедикт с лососем</span><b data-dish-price="bp006"></b></figcaption></figure></li>
+            <li class="dish-photo reveal" style="--d:2"><figure><div class="dish-photo__img"><img src="https://imageproxy.wolt.com/menu/menu-images/66c47cfdeb8e04b64c44631d/2e8eb236-cebc-11f0-ab89-fa851cb0b4ca_dba959db_e396_4e7f_8ec4_02371ff4a982?w=1200" srcset="https://imageproxy.wolt.com/menu/menu-images/66c47cfdeb8e04b64c44631d/2e8eb236-cebc-11f0-ab89-fa851cb0b4ca_dba959db_e396_4e7f_8ec4_02371ff4a982?w=600 600w, https://imageproxy.wolt.com/menu/menu-images/66c47cfdeb8e04b64c44631d/2e8eb236-cebc-11f0-ab89-fa851cb0b4ca_dba959db_e396_4e7f_8ec4_02371ff4a982?w=1200 1200w" sizes="(min-width:1280px) 200px, (min-width:1024px) 30vw, 50vw" alt="Шакшука с 2 яйцами и чиабаттой" data-dish="bp001" loading="lazy" decoding="async" width="600" height="600"></div><figcaption><span data-dish-name="bp001">Шакшука с 2 яйцами и чиабаттой</span><b data-dish-price="bp001"></b></figcaption></figure></li>
+            <li class="dish-photo reveal" style="--d:3"><figure><div class="dish-photo__img"><img src="https://imageproxy.wolt.com/menu/menu-images/66c47cfdeb8e04b64c44631d/2e93f5c0-cebc-11f0-ab89-fa851cb0b4ca_7df221d0_beb3_4068_8d8d_531b2f3984a7?w=1200" srcset="https://imageproxy.wolt.com/menu/menu-images/66c47cfdeb8e04b64c44631d/2e93f5c0-cebc-11f0-ab89-fa851cb0b4ca_7df221d0_beb3_4068_8d8d_531b2f3984a7?w=600 600w, https://imageproxy.wolt.com/menu/menu-images/66c47cfdeb8e04b64c44631d/2e93f5c0-cebc-11f0-ab89-fa851cb0b4ca_7df221d0_beb3_4068_8d8d_531b2f3984a7?w=1200 1200w" sizes="(min-width:1280px) 200px, (min-width:1024px) 30vw, 50vw" alt="Турецкий завтрак" data-dish="bp005" loading="lazy" decoding="async" width="600" height="600"></div><figcaption><span data-dish-name="bp005">Турецкий завтрак</span><b data-dish-price="bp005"></b></figcaption></figure></li>
+          </ul>
+          <a class="btn btn--outline" href="#menu" data-open-tab="breakfast"><span data-i18n="breakfast.cta">Все завтраки</span><svg class="ico" aria-hidden="true"><use href="#i-right"/></svg></a>
+        </div>
+
+        <aside class="lunch-card reveal" style="--d:1" aria-labelledby="lunch-title">
+          <p class="lunch-card__kicker"><svg class="ico" aria-hidden="true"><use href="#i-utensils"/></svg><span data-i18n="lunch.kicker">Бизнес-ланч в бистро</span></p>
+          <h3 class="lunch-card__title" id="lunch-title"><span data-i18n="lunch.title">Ланч-сет</span> — <span class="lunch-card__price" data-price="75000">75 000 сум</span></h3>
+          <p class="lunch-card__formula" data-i18n="lunch.formula">салат + горячее + гарнир + суп на выбор + хлеб</p>
+          <ol class="lunch-list" id="lunch-list">
+            <!-- Сеты подставляются из data/menu.js (group: "lunch") -->
+          </ol>
+          <p class="lunch-card__note" data-i18n="lunch.note">Ежедневно с 11:00. Состав сетов меняется — уточняйте на линии раздачи.</p>
+          <a class="btn btn--primary" href="#menu" data-open-tab="bistro"><span data-i18n="lunch.cta">Все блюда бистро</span></a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ================= 5.8 ДЛЯ СЕМЕЙ ================= -->
+    <section class="section" id="family" aria-labelledby="family-title">
+      <div class="container family">
+        <div class="family__media reveal">
+          <!-- REPLACE: реальное фото детской комнаты Broccoli Park -->
+          <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1600&q=80" srcset="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=640&q=80 640w, https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1200&q=80 1200w, https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1600&q=80 1600w" sizes="(min-width:768px) 50vw, 100vw" alt="Ребёнок играет в детской комнате" data-i18n-attr="alt:family.alt" loading="lazy" decoding="async" width="1000" height="1100">
+          <span class="family__sticker" aria-hidden="true"><svg class="ico"><use href="#i-heart"/></svg></span>
+        </div>
+        <div class="family__body">
+          <header class="section-head section-head--left reveal">
+            <p class="kicker" data-i18n="family.kicker">Для семей с детьми</p>
+            <h2 class="h2" id="family-title" data-i18n="family.title">Пока взрослые отдыхают — дети играют</h2>
+            <p class="lead" data-i18n="family.text">Мы любим, когда к нам приходят всей семьёй. Поэтому здесь есть всё, чтобы малышам было интересно, а родителям — спокойно.</p>
+          </header>
+          <ul class="family__list">
+            <li class="reveal" style="--d:0"><span class="pill-icon"><svg class="ico" aria-hidden="true"><use href="#i-baby"/></svg></span><span data-i18n="family.l1">Бесплатная игровая комната для малышей до ~5 лет</span></li>
+            <li class="reveal" style="--d:1"><span class="pill-icon"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></span><span data-i18n="family.l2">Пеленальный столик с подгузниками и салфетками</span></li>
+            <li class="reveal" style="--d:2"><span class="pill-icon"><svg class="ico" aria-hidden="true"><use href="#i-salad"/></svg></span><span data-i18n="family.l3">Детское меню: пельмени, сырники без сахара, котлеты на пару</span></li>
+            <li class="reveal" style="--d:3"><span class="pill-icon"><svg class="ico" aria-hidden="true"><use href="#i-sparkles"/></svg></span><span data-i18n="family.l4">Раскраски, аниматоры и мастер-классы по выходным</span></li>
+          </ul>
+          <a class="btn btn--primary" href="#menu" data-open-tab="kids"><svg class="ico" aria-hidden="true"><use href="#i-baby"/></svg><span data-i18n="family.cta">Посмотреть детское меню</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 5.9 ВЕЧЕРА ================= -->
+    <section class="section section--dark evenings" id="evenings" aria-labelledby="evenings-title">
+      <div class="evenings__bg" aria-hidden="true">
+        <!-- REPLACE: реальное фото — вечерний зал / терраса с огнями -->
+        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=2400&q=80" srcset="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=640&q=80 640w, https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1200&q=80 1200w, https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=2400&q=80 2400w" sizes="100vw" alt="" loading="lazy" decoding="async">
+      </div>
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker kicker--light" data-i18n="evenings.kicker">Вечером</p>
+          <h2 class="h2" id="evenings-title" data-i18n="evenings.title">Вечера в Broccoli Park</h2>
+          <p class="lead" data-i18n="evenings.text">Когда зажигаются огни, бистро становится рестораном: живая музыка, бокал вина и разговоры, которые не хочется заканчивать.</p>
+        </header>
+        <ul class="evenings__grid">
+          <li class="glass-card reveal" style="--d:0"><span class="glass-card__icon"><svg class="ico" aria-hidden="true"><use href="#i-music"/></svg></span><h3 data-i18n="evenings.1.title">Живая музыка</h3><p data-i18n="evenings.1.text">Каждый вечер примерно с 20:30, на выходных — шоу-программа.</p></li>
+          <li class="glass-card reveal" style="--d:1"><span class="glass-card__icon"><svg class="ico" aria-hidden="true"><use href="#i-trees"/></svg></span><h3 data-i18n="evenings.2.title">Терраса под деревьями</h3><p data-i18n="evenings.2.text">Тёплые огни, прохладный туман и вид на зелёный центр.</p></li>
+          <li class="glass-card reveal" style="--d:2"><span class="glass-card__icon"><svg class="ico" aria-hidden="true"><use href="#i-party"/></svg></span><h3 data-i18n="evenings.3.title">Банкеты и мероприятия</h3><p data-i18n="evenings.3.text">Дни рождения, свадьбы, корпоративы — соберём меню под ваш повод.</p></li>
+        </ul>
+        <div class="evenings__cta reveal">
+          <a class="btn btn--accent btn--lg" href="#booking" data-banquet><svg class="ico" aria-hidden="true"><use href="#i-glass"/></svg><span data-i18n="evenings.cta">Заказать банкет</span></a>
+          <a class="btn btn--outline-light btn--lg" href="tel:+998955011010"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>+998 95 501 10 10</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 5.10 ГАЛЕРЕЯ ================= -->
+    <section class="section" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker" data-i18n="gallery.kicker">Галерея</p>
+          <h2 class="h2" id="gallery-title" data-i18n="gallery.title">Загляните к нам</h2>
+        </header>
+        <!-- REPLACE: все фото галереи — на официальные фото ресторана.
+             Фото с пометкой «фото гостей» взяты из Яндекс Карт — используйте только с разрешения авторов. -->
+        <ul class="gallery" id="gallery-list">
+          <li class="gallery__item reveal" style="--d:0"><button type="button" class="gallery__btn"><img src="https://avatars.mds.yandex.net/get-altay/13791177/2a0000019e40bb7a0a9b9c01b7a29ac8e96a/XXXL" data-fallback="https://avatars.mds.yandex.net/get-altay/13791177/2a0000019e40bb7a0a9b9c01b7a29ac8e96a/XXL|https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1600&q=80" alt="Зал ресторана — фото гостей" data-i18n-attr="alt:gallery.a1" loading="lazy" decoding="async" style="aspect-ratio:3/4"></button></li>
+          <li class="gallery__item reveal" style="--d:1"><button type="button" class="gallery__btn"><img src="https://imageproxy.wolt.com/menu/menu-images/66c47cfdeb8e04b64c44631d/2e92a990-cebc-11f0-ab89-fa851cb0b4ca_3f380c2a_83e9_4196_a2fc_20d4ddb3fd1c?w=1600" srcset="https://imageproxy.wolt.com/menu/menu-images/66c47cfdeb8e04b64c44631d/2e92a990-cebc-11f0-ab89-fa851cb0b4ca_3f380c2a_83e9_4196_a2fc_20d4ddb3fd1c?w=600 600w, https://imageproxy.wolt.com/menu/menu-images/66c47cfdeb8e04b64c44631d/2e92a990-cebc-11f0-ab89-fa851cb0b4ca_3f380c2a_83e9_4196_a2fc_20d4ddb3fd1c?w=1600 1600w" sizes="(min-width:1024px) 25vw, (min-width:768px) 33vw, 50vw" data-fallback="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=1600&q=80" alt="Завтрак Брокколи с лососем и яйцом пашот" data-i18n-attr="alt:gallery.a2" loading="lazy" decoding="async" style="aspect-ratio:1/1"></button></li>
+          <li class="gallery__item reveal" style="--d:2"><button type="button" class="gallery__btn"><img src="https://avatars.mds.yandex.net/get-altay/18116908/2a0000019e40bb6a2ac41315c727b71dc168/XXXL" data-fallback="https://avatars.mds.yandex.net/get-altay/18116908/2a0000019e40bb6a2ac41315c727b71dc168/XXL|https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1600&q=80" alt="Атмосфера вечера — фото гостей" data-i18n-attr="alt:gallery.a3" loading="lazy" decoding="async" style="aspect-ratio:4/3"></button></li>
+          <li class="gallery__item reveal" style="--d:3"><button type="button" class="gallery__btn"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80" srcset="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=640&q=80 640w, https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80 1200w, https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80 1600w" sizes="(min-width:1024px) 25vw, (min-width:768px) 33vw, 50vw" alt="Уютный интерьер с зеленью" data-i18n-attr="alt:gallery.a4" loading="lazy" decoding="async" style="aspect-ratio:3/4"></button></li>
+          <li class="gallery__item reveal" style="--d:0"><button type="button" class="gallery__btn"><img src="https://imageproxy.wolt.com/menu/menu-images/66c47cfdeb8e04b64c44631d/caa120da-cebe-11f0-8bb7-de59d7f6ea55_9cdfb02f_49a7_468f_896d_714df42ef61d?w=1600" srcset="https://imageproxy.wolt.com/menu/menu-images/66c47cfdeb8e04b64c44631d/caa120da-cebe-11f0-8bb7-de59d7f6ea55_9cdfb02f_49a7_468f_896d_714df42ef61d?w=600 600w, https://imageproxy.wolt.com/menu/menu-images/66c47cfdeb8e04b64c44631d/caa120da-cebe-11f0-8bb7-de59d7f6ea55_9cdfb02f_49a7_468f_896d_714df42ef61d?w=1600 1600w" sizes="(min-width:1024px) 25vw, (min-width:768px) 33vw, 50vw" data-fallback="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1600&q=80" alt="Салат с лососем и киноа" data-i18n-attr="alt:gallery.a5" loading="lazy" decoding="async" style="aspect-ratio:1/1"></button></li>
+          <li class="gallery__item reveal" style="--d:1"><button type="button" class="gallery__btn"><img src="https://avatars.mds.yandex.net/get-altay/19553098/2a0000019cfbb61aeaf945cbcd710e7d3ebc/XXXL" data-fallback="https://avatars.mds.yandex.net/get-altay/19553098/2a0000019cfbb61aeaf945cbcd710e7d3ebc/XXL|https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80" alt="Блюда Broccoli Park — фото гостей" data-i18n-attr="alt:gallery.a6" loading="lazy" decoding="async" style="aspect-ratio:4/5"></button></li>
+          <li class="gallery__item reveal" style="--d:2"><button type="button" class="gallery__btn"><img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1600&q=80" srcset="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=640&q=80 640w, https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=80 1200w, https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1600&q=80 1600w" sizes="(min-width:1024px) 25vw, (min-width:768px) 33vw, 50vw" alt="Вечерний бар" data-i18n-attr="alt:gallery.a7" loading="lazy" decoding="async" style="aspect-ratio:4/3"></button></li>
+          <li class="gallery__item reveal" style="--d:3"><button type="button" class="gallery__btn"><img src="https://imageproxy.wolt.com/menu/menu-images/66c47cfdeb8e04b64c44631d/2e93f5c0-cebc-11f0-ab89-fa851cb0b4ca_7df221d0_beb3_4068_8d8d_531b2f3984a7?w=1600" srcset="https://imageproxy.wolt.com/menu/menu-images/66c47cfdeb8e04b64c44631d/2e93f5c0-cebc-11f0-ab89-fa851cb0b4ca_7df221d0_beb3_4068_8d8d_531b2f3984a7?w=600 600w, https://imageproxy.wolt.com/menu/menu-images/66c47cfdeb8e04b64c44631d/2e93f5c0-cebc-11f0-ab89-fa851cb0b4ca_7df221d0_beb3_4068_8d8d_531b2f3984a7?w=1600 1600w" sizes="(min-width:1024px) 25vw, (min-width:768px) 33vw, 50vw" data-fallback="https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?auto=format&fit=crop&w=1600&q=80" alt="Турецкий завтрак" data-i18n-attr="alt:gallery.a8" loading="lazy" decoding="async" style="aspect-ratio:1/1"></button></li>
+          <li class="gallery__item reveal" style="--d:0"><button type="button" class="gallery__btn"><img src="https://avatars.mds.yandex.net/get-altay/15381861/2a00000198abe7b5141e7dbdc1a8f6ccde54/XXXL" data-fallback="https://avatars.mds.yandex.net/get-altay/15381861/2a00000198abe7b5141e7dbdc1a8f6ccde54/XXL|https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1600&q=80" alt="Интерьер — фото гостей" data-i18n-attr="alt:gallery.a9" loading="lazy" decoding="async" style="aspect-ratio:3/4"></button></li>
+          <li class="gallery__item reveal" style="--d:1"><button type="button" class="gallery__btn"><img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1600&q=80" srcset="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=640&q=80 640w, https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1200&q=80 1200w, https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1600&q=80 1600w" sizes="(min-width:1024px) 25vw, (min-width:768px) 33vw, 50vw" alt="Праздничная сервировка для банкета" data-i18n-attr="alt:gallery.a10" loading="lazy" decoding="async" style="aspect-ratio:4/3"></button></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= 5.11 ОТЗЫВЫ ================= -->
+    <section class="section section--cream" id="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker" data-i18n="reviews.kicker">Отзывы</p>
+          <h2 class="h2" id="reviews-title" data-i18n="reviews.title">Нам доверяют</h2>
+        </header>
+        <div class="rating-hero reveal">
+          <span class="rating-hero__score">5.0</span>
+          <span class="stars" role="img" aria-label="Оценка 5 из 5" data-i18n-attr="aria-label:reviews.stars">
+            <svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg>
+          </span>
+          <span class="rating-hero__sub" data-i18n="reviews.ratingSub">2000+ оценок на Яндекс Картах</span>
+        </div>
+
+        <!--
+          ВНИМАНИЕ: тексты отзывов ниже — НЕЙТРАЛЬНЫЕ ЗАГЛУШКИ, составленные по темам реальных отзывов
+          (интерьер, живая музыка, забота о детях, завтраки). Перед запуском замените их на реальные
+          отзывы гостей — только с согласия авторов. Тексты лежат в i18n/*.json (ключи reviews.r1…r6).
+        -->
+        <div class="slider reveal" id="reviews-slider" aria-roledescription="carousel">
+          <div class="slider__track" tabindex="0">
+            <article class="review" aria-roledescription="slide"><div class="stars stars--sm" aria-hidden="true"><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg></div><p class="review__text" data-i18n="reviews.r1">Очень красивый интерьер и тёплая атмосфера. Пришли на ужин, а остались до закрытия.</p><footer class="review__author"><span class="avatar" aria-hidden="true">А</span><span>Александр</span></footer></article>
+            <article class="review" aria-roledescription="slide"><div class="stars stars--sm" aria-hidden="true"><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg></div><p class="review__text" data-i18n="reviews.r2">Вечером живая музыка — отличный повод выбраться в центр. Кухня тоже порадовала.</p><footer class="review__author"><span class="avatar" aria-hidden="true">О</span><span>Олеся Б.</span></footer></article>
+            <article class="review" aria-roledescription="slide"><div class="stars stars--sm" aria-hidden="true"><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg></div><p class="review__text" data-i18n="reviews.r3">Спасибо за заботу о детях: игровая, пеленальный столик и детское меню. Мы спокойно поели.</p><footer class="review__author"><span class="avatar" aria-hidden="true">R</span><span>Ruhshona A.</span></footer></article>
+            <article class="review" aria-roledescription="slide"><div class="stars stars--sm" aria-hidden="true"><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg></div><p class="review__text" data-i18n="reviews.r4">Лучшие завтраки в центре: шакшука и сырники просто супер, кофе тоже на уровне.</p><footer class="review__author"><span class="avatar" aria-hidden="true">M</span><span>Marina P.</span></footer></article>
+            <article class="review" aria-roledescription="slide"><div class="stars stars--sm" aria-hidden="true"><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg></div><p class="review__text" data-i18n="reviews.r5">Днём быстро обедаем в бистро с коллегами — выбор огромный, всё свежее.</p><footer class="review__author"><span class="avatar" aria-hidden="true">T</span><span>Timur</span></footer></article>
+            <article class="review" aria-roledescription="slide"><div class="stars stars--sm" aria-hidden="true"><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg></div><p class="review__text" data-i18n="reviews.r6">Летом сидели на террасе с туманом — прохладно и очень уютно. Вернёмся!</p><footer class="review__author"><span class="avatar" aria-hidden="true">D</span><span>Dilnoza</span></footer></article>
+          </div>
+          <div class="slider__controls">
+            <button class="icon-btn" type="button" data-slide="prev" aria-label="Предыдущий отзыв" data-i18n-attr="aria-label:reviews.prev"><svg class="ico" aria-hidden="true"><use href="#i-left"/></svg></button>
+            <div class="slider__dots" role="group"></div>
+            <button class="icon-btn" type="button" data-slide="next" aria-label="Следующий отзыв" data-i18n-attr="aria-label:reviews.next"><svg class="ico" aria-hidden="true"><use href="#i-right"/></svg></button>
+          </div>
+        </div>
+        <p class="center reveal">
+          <a class="link-arrow" href="https://yandex.uz/maps/org/broccoli_park/178977758143/reviews/" target="_blank" rel="noopener"><span data-i18n="reviews.all">Все отзывы на Яндекс Картах</span><svg class="ico" aria-hidden="true"><use href="#i-right"/></svg></a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= 5.12 БРОНИРОВАНИЕ ================= -->
+    <section class="section" id="booking" aria-labelledby="booking-title">
+      <div class="container booking">
+        <div class="booking__form-wrap reveal">
+          <header class="section-head section-head--left">
+            <p class="kicker" data-i18n="booking.kicker">Бронирование</p>
+            <h2 class="h2" id="booking-title" data-i18n="booking.title">Забронировать стол</h2>
+            <p class="lead" data-i18n="booking.lead">Оставьте заявку — администратор перезвонит и подтвердит бронь в течение 15 минут.</p>
+          </header>
+
+          <form class="form" id="booking-form" novalidate>
+            <div class="form__grid">
+              <div class="field">
+                <label for="f-name" data-i18n="booking.name">Имя</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required minlength="2" maxlength="60" placeholder="Как к вам обращаться" data-i18n-attr="placeholder:booking.namePh" aria-describedby="f-name-err">
+                <p class="field__error" id="f-name-err" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="f-phone" data-i18n="booking.phone">Телефон</label>
+                <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="+998 __ ___ __ __" aria-describedby="f-phone-err">
+                <p class="field__error" id="f-phone-err" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="f-date" data-i18n="booking.date">Дата</label>
+                <input id="f-date" name="date" type="date" required aria-describedby="f-date-err">
+                <p class="field__error" id="f-date-err" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="f-time" data-i18n="booking.time">Время</label>
+                <input id="f-time" name="time" type="time" min="08:00" max="22:00" step="900" required aria-describedby="f-time-err">
+                <p class="field__error" id="f-time-err" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="f-guests" data-i18n="booking.guests">Гостей</label>
+                <div class="stepper">
+                  <button type="button" class="stepper__btn" data-step="-1" aria-label="−1" tabindex="-1">−</button>
+                  <input id="f-guests" name="guests" type="number" inputmode="numeric" min="1" max="50" value="2" required aria-describedby="f-guests-err">
+                  <button type="button" class="stepper__btn" data-step="1" aria-label="+1" tabindex="-1">+</button>
+                </div>
+                <p class="field__error" id="f-guests-err" aria-live="polite"></p>
+              </div>
+              <fieldset class="field field--zone">
+                <legend data-i18n="booking.zone">Зона</legend>
+                <div class="chips">
+                  <label class="chip"><input type="radio" name="zone" value="zone1" checked><span data-i18n="booking.zone1">1 этаж · бистро</span></label>
+                  <label class="chip"><input type="radio" name="zone" value="zone2"><span data-i18n="booking.zone2">2 этаж · ресторан</span></label>
+                  <label class="chip"><input type="radio" name="zone" value="zone3"><span data-i18n="booking.zone3">Терраса</span></label>
+                </div>
+              </fieldset>
+              <div class="field field--full">
+                <label for="f-comment"><span data-i18n="booking.comment">Комментарий</span> <span class="muted">(<span data-i18n="booking.optional">необязательно</span>)</span></label>
+                <textarea id="f-comment" name="comment" rows="3" maxlength="500" placeholder="Повод, детский стульчик, пожелания…" data-i18n-attr="placeholder:booking.commentPh"></textarea>
+              </div>
+            </div>
+            <!-- Ловушка для спам-ботов: люди это поле не видят и не заполняют -->
+            <div class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+            <p class="form__error" id="form-error" role="alert"></p>
+            <button class="btn btn--primary btn--lg btn--block-sm" type="submit"><svg class="ico" aria-hidden="true"><use href="#i-send"/></svg><span data-i18n="booking.submit">Отправить заявку</span></button>
+          </form>
+        </div>
+
+        <aside class="call-card reveal" style="--d:1">
+          <span class="call-card__icon"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></span>
+          <h3 class="h3" data-i18n="booking.callTitle">Или позвоните</h3>
+          <a class="call-card__phone" href="tel:+998955011010">+998 95 501 10 10</a>
+          <p data-i18n="booking.callText">Ответим ежедневно с 08:00 до 23:00. Банкеты и большие компании — тоже по этому номеру.</p>
+          <a class="btn btn--ghost-light" href="https://t.me/broccoli_uz" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-send"/></svg><span data-i18n="booking.tg">Написать в Telegram</span></a>
+          <svg class="call-card__deco" aria-hidden="true"><use href="#deco-broccoli"/></svg>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ================= 5.13 ДОСТАВКА ================= -->
+    <section class="section section--tight" id="delivery" aria-labelledby="delivery-title">
+      <div class="container">
+        <div class="delivery reveal">
+          <div class="delivery__icon" aria-hidden="true"><svg class="ico"><use href="#i-truck"/></svg></div>
+          <div class="delivery__body">
+            <p class="kicker" data-i18n="delivery.kicker">Доставка</p>
+            <h2 class="h2" id="delivery-title" data-i18n="delivery.title">Закажите домой</h2>
+            <p data-i18n="delivery.text">Любимые блюда из бистро и ресторана — горячими, к вашему столу. Звоните или заказывайте в приложениях.</p>
+          </div>
+          <div class="delivery__actions">
+            <a class="delivery__phone" href="tel:+998956021010"><span class="muted" data-i18n="delivery.phone">Телефон доставки</span><b>+998 95 602 10 10</b></a>
+            <div class="delivery__apps">
+              <!-- TODO: проверить прямые ссылки на страницу ресторана в Wolt и Яндекс Еде -->
+              <a class="btn btn--wolt" href="https://wolt.com/ru/uzb/tashkent/restaurant/broccoli-park" target="_blank" rel="noopener" data-i18n="delivery.wolt">Заказать в Wolt</a>
+              <a class="btn btn--yandex" href="https://eda.yandex.uz/tashkent/r/broccoli_park" target="_blank" rel="noopener" data-i18n="delivery.yandex">Яндекс Еда</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 5.14 КОНТАКТЫ ================= -->
+    <section class="section section--cream" id="contacts" aria-labelledby="contacts-title">
+      <div class="container contacts">
+        <div class="contacts__info">
+          <header class="section-head section-head--left reveal">
+            <p class="kicker" data-i18n="contacts.kicker">Контакты</p>
+            <h2 class="h2" id="contacts-title" data-i18n="contacts.title">Как нас найти</h2>
+          </header>
+          <dl class="info-list reveal">
+            <div class="info-list__row">
+              <dt><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span data-i18n="contacts.address">Адрес</span></dt>
+              <dd><address><span data-i18n="contacts.addressValue">г. Ташкент, Мирзо-Улугбекский р-н, ул. Шахрисабз, 31Б</span><br><span class="muted" data-i18n="contacts.landmark">Ориентир — гостиница «Тата»</span></address></dd>
+            </div>
+            <div class="info-list__row">
+              <dt><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg><span data-i18n="contacts.hours">Часы работы</span></dt>
+              <dd data-i18n="contacts.hoursValue">Ежедневно 08:00–23:00</dd>
+            </div>
+            <div class="info-list__row">
+              <dt><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="contacts.phones">Телефоны</span></dt>
+              <dd>
+                <a href="tel:+998955011010">+998 95 501 10 10</a> <span class="muted">— <span data-i18n="contacts.phoneBook">бронь</span></span><br>
+                <a href="tel:+998956021010">+998 95 602 10 10</a> <span class="muted">— <span data-i18n="contacts.phoneDelivery">доставка</span></span>
+              </dd>
+            </div>
+            <div class="info-list__row">
+              <dt><svg class="ico" aria-hidden="true"><use href="#i-nav"/></svg><span data-i18n="contacts.howto">Как добраться</span></dt>
+              <dd>
+                <span class="icon-line"><svg class="ico" aria-hidden="true"><use href="#i-train"/></svg><span data-i18n="contacts.metro">Метро Amir Temur xiyoboni — ~190 м пешком</span></span>
+                <span class="icon-line"><svg class="ico" aria-hidden="true"><use href="#i-parking"/></svg><span data-i18n="contacts.parking">Парковка у входа</span></span>
+              </dd>
+            </div>
+          </dl>
+          <div class="contacts__actions reveal">
+            <a class="btn btn--primary" href="https://yandex.uz/maps/?rtext=~41.31207%2C69.28537&amp;rtt=auto" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-nav"/></svg><span data-i18n="contacts.route">Построить маршрут</span></a>
+          </div>
+          <p class="contacts__social-title reveal" data-i18n="contacts.social">Мы в соцсетях</p>
+          <ul class="socials reveal">
+            <li><a class="social" href="https://www.instagram.com/broccolipark.uz" target="_blank" rel="noopener" aria-label="Instagram @broccolipark.uz"><svg class="ico" aria-hidden="true"><use href="#i-instagram"/></svg><span>@broccolipark.uz</span></a></li>
+            <li><a class="social" href="https://t.me/broccoli_uz" target="_blank" rel="noopener" aria-label="Telegram @broccoli_uz"><svg class="ico" aria-hidden="true"><use href="#i-send"/></svg><span>@broccoli_uz</span></a></li>
+            <li><a class="social" href="https://www.facebook.com/broccolipark.uz" target="_blank" rel="noopener" aria-label="Facebook"><svg class="ico" aria-hidden="true"><use href="#i-facebook"/></svg><span>Facebook</span></a></li>
+          </ul>
+        </div>
+        <div class="map reveal" style="--d:1">
+          <iframe id="map-frame" title="Broccoli Park на Яндекс Картах" data-i18n-attr="title:contacts.mapTitle"
+                  src="https://yandex.uz/map-widget/v1/?ll=69.28537%2C41.31207&amp;z=16&amp;pt=69.28537%2C41.31207%2Cpm2grm&amp;lang=ru_RU"
+                  loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= 5.15 ФУТЕР ================= -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="logo logo--light" href="#top" aria-label="Broccoli Park — на главную" data-i18n-attr="aria-label:logo.aria">
+          <span class="logo__mark" aria-hidden="true"><svg class="ico"><use href="#i-leaf"/></svg></span>
+          <span class="logo__text">Broccoli<b>Park</b></span>
+        </a>
+        <p data-i18n="footer.slogan">Атмосферный ресторан в центре города с заботой о каждом.</p>
+        <ul class="socials socials--footer">
+          <li><a class="social social--icon" href="https://www.instagram.com/broccolipark.uz" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ico" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+          <li><a class="social social--icon" href="https://t.me/broccoli_uz" target="_blank" rel="noopener" aria-label="Telegram"><svg class="ico" aria-hidden="true"><use href="#i-send"/></svg></a></li>
+          <li><a class="social social--icon" href="https://www.facebook.com/broccolipark.uz" target="_blank" rel="noopener" aria-label="Facebook"><svg class="ico" aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
+        </ul>
+      </div>
+      <nav class="footer__col" aria-labelledby="footer-nav-title">
+        <h2 class="footer__title" id="footer-nav-title" data-i18n="footer.nav">Навигация</h2>
+        <ul>
+          <li><a href="#about" data-i18n="nav.about">О нас</a></li>
+          <li><a href="#menu" data-i18n="nav.menu">Меню</a></li>
+          <li><a href="#breakfast" data-i18n="nav.breakfast">Завтраки</a></li>
+          <li><a href="#family" data-i18n="nav.family">Для семей</a></li>
+          <li><a href="#reviews" data-i18n="nav.reviews">Отзывы</a></li>
+          <li><a href="#contacts" data-i18n="nav.contacts">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="footer__col">
+        <h2 class="footer__title" data-i18n="footer.contacts">Контакты</h2>
+        <ul>
+          <li><a href="tel:+998955011010">+998 95 501 10 10</a> <span class="footer__muted">· <span data-i18n="contacts.phoneBook">бронь</span></span></li>
+          <li><a href="tel:+998956021010">+998 95 602 10 10</a> <span class="footer__muted">· <span data-i18n="contacts.phoneDelivery">доставка</span></span></li>
+          <li data-i18n="contacts.addressValue">г. Ташкент, Мирзо-Улугбекский р-н, ул. Шахрисабз, 31Б</li>
+          <li data-i18n="contacts.hoursValue">Ежедневно 08:00–23:00</li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h2 class="footer__title" data-i18n="footer.lang">Язык</h2>
+        <div class="lang lang--footer" role="group" aria-label="Язык сайта" data-i18n-attr="aria-label:header.lang">
+          <button class="lang__btn" type="button" data-lang="ru" aria-pressed="true" lang="ru">RU</button>
+          <button class="lang__btn" type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+          <button class="lang__btn" type="button" data-lang="uz" aria-pressed="false" lang="uz">UZ</button>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© 2026 Broccoli Park. <span data-i18n="footer.rights">Все права защищены.</span></p>
+    </div>
+  </footer>
+
+  <!-- ================= 5.16 МОБИЛЬНАЯ ПАНЕЛЬ ================= -->
+  <nav class="bottom-bar" aria-label="Быстрые действия">
+    <a href="tel:+998955011010"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="mobile.call">Позвонить</span></a>
+    <a href="#booking" class="bottom-bar__main"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg><span data-i18n="mobile.book">Бронь</span></a>
+    <a href="#menu"><svg class="ico" aria-hidden="true"><use href="#i-utensils"/></svg><span data-i18n="mobile.menu">Меню</span></a>
+  </nav>
+
+  <button class="to-top" type="button" aria-label="Наверх" data-i18n-attr="aria-label:toTop"><svg class="ico" aria-hidden="true"><use href="#i-up"/></svg></button>
+
+  <!-- Лайтбокс галереи -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фото" data-i18n-attr="aria-label:lightbox.label" hidden>
+    <button class="lightbox__close icon-btn icon-btn--light" type="button" aria-label="Закрыть" data-i18n-attr="aria-label:lightbox.close"><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg></button>
+    <button class="lightbox__nav lightbox__nav--prev icon-btn icon-btn--light" type="button" aria-label="Предыдущее фото" data-i18n-attr="aria-label:lightbox.prev"><svg class="ico" aria-hidden="true"><use href="#i-left"/></svg></button>
+    <figure class="lightbox__figure">
+      <img class="lightbox__img" alt="">
+      <figcaption class="lightbox__caption"></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--next icon-btn icon-btn--light" type="button" aria-label="Следующее фото" data-i18n-attr="aria-label:lightbox.next"><svg class="ico" aria-hidden="true"><use href="#i-right"/></svg></button>
+  </div>
+
+  <!-- Модалка успешной заявки -->
+  <div class="modal" id="booking-modal" role="dialog" aria-modal="true" aria-labelledby="booking-modal-title" hidden>
+    <div class="modal__card">
+      <span class="modal__icon"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span>
+      <h2 class="h3" id="booking-modal-title" data-i18n="booking.ok.title">Заявка готова!</h2>
+      <p id="booking-modal-text" data-i18n="booking.ok.text">Мы скопировали текст заявки. Откройте Telegram и отправьте его нам — или просто позвоните.</p>
+      <pre class="modal__msg" id="booking-msg"></pre>
+      <div class="modal__actions">
+        <a class="btn btn--primary" id="booking-tg" href="https://t.me/broccoli_uz" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-send"/></svg><span data-i18n="booking.ok.telegram">Открыть Telegram</span></a>
+        <a class="btn btn--outline" href="tel:+998955011010"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="booking.ok.call">Позвонить</span></a>
+      </div>
+      <button class="modal__close icon-btn" type="button" aria-label="Закрыть" data-i18n-attr="aria-label:booking.ok.close"><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg></button>
+    </div>
+  </div>
+</body>
+</html>
